@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 import { motion } from "framer-motion";
 
 import KeyboardDoubleArrowDownOutlinedIcon from "@mui/icons-material/KeyboardDoubleArrowDownOutlined";
+import { toggleDarkTheme } from "../../components/utils";
 
 interface HomeProps {
   isDarkMode: boolean;
@@ -10,12 +11,18 @@ interface HomeProps {
 const Home = (props: HomeProps): ReactElement => {
   const { isDarkMode } = props;
 
+  const handleToggleDropIcon = (isDarkMode: boolean) => {
+    return isDarkMode
+      ? "bg-gray-200  text-gray-800"
+      : "bg-gray-900  text-white";
+  };
+
   return (
     <>
       <section
-        className={`py-8 h-screen flex flex-col justify-center items-center ${
-          isDarkMode ? "bg-gray-900 text-white" : "bg-gray-200 text-gray-800"
-        }`}
+        className={`py-8 h-screen flex flex-col justify-center items-center ${toggleDarkTheme(
+          isDarkMode
+        )}`}
       >
         <motion.div
           initial={{ y: -100, opacity: 0 }}
@@ -31,12 +38,8 @@ const Home = (props: HomeProps): ReactElement => {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.5, delay: 1 }}
-          className={`mt-8 animate-bounce cursor-pointer z-10 rounded-full shadow-md
-          p-3 ${
-            isDarkMode
-              ? "bg-gray-200  text-gray-800"
-              : "bg-gray-900  text-white"
-          }`}
+          className={`mt-8 animate-bounce cursor-pointer z-10 rounded-2xl shadow-md
+          p-3 ${handleToggleDropIcon(isDarkMode)}`}
         >
           <KeyboardDoubleArrowDownOutlinedIcon fontSize="large" />
         </motion.div>
