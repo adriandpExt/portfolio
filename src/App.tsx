@@ -32,9 +32,9 @@ const App = (): ReactElement => {
     return (
       <>
         <Appbar isDarkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-        <Home />
+        <Home isDarkMode={darkMode} />
         <About />
-        <Home />
+        <Home isDarkMode={darkMode} />
       </>
     );
   };

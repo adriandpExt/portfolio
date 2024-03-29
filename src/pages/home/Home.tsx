@@ -3,10 +3,20 @@ import { motion } from "framer-motion";
 
 import KeyboardDoubleArrowDownOutlinedIcon from "@mui/icons-material/KeyboardDoubleArrowDownOutlined";
 
-const Home = (): ReactElement => {
+interface HomeProps {
+  isDarkMode: boolean;
+}
+
+const Home = (props: HomeProps): ReactElement => {
+  const { isDarkMode } = props;
+
   return (
     <>
-      <section className="bg-blue-500 text-white py-8 h-screen flex flex-col justify-center items-center">
+      <section
+        className={`py-8 h-screen flex flex-col justify-center items-center ${
+          isDarkMode ? "bg-gray-900 text-white" : "bg-gray-200 text-gray-800"
+        }`}
+      >
         <motion.div
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -21,8 +31,12 @@ const Home = (): ReactElement => {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.5, delay: 1 }}
-          className="mt-8 text-blue-500 animate-bounce cursor-pointer z-10 rounded-full bg-white shadow-md
-          p-3"
+          className={`mt-8 animate-bounce cursor-pointer z-10 rounded-full shadow-md
+          p-3 ${
+            isDarkMode
+              ? "bg-gray-200  text-gray-800"
+              : "bg-gray-900  text-white"
+          }`}
         >
           <KeyboardDoubleArrowDownOutlinedIcon fontSize="large" />
         </motion.div>

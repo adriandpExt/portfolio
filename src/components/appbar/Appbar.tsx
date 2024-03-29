@@ -11,12 +11,6 @@ interface AppbarProps {
 export const Appbar = (props: AppbarProps): ReactElement => {
   const { isDarkMode, toggleDarkMode } = props;
 
-  // const [isDarkMode, setIsDarkMode] = useState(false);
-
-  // const toggleDarkMode = () => {
-  //   setIsDarkMode(!isDarkMode);
-  // };
-
   const showIconButton = (): ReactNode => {
     return isDarkMode ? (
       <LightModeOutlinedIcon fontSize="medium" />
@@ -31,11 +25,15 @@ export const Appbar = (props: AppbarProps): ReactElement => {
         isDarkMode ? "bg-gray-900 text-white" : "bg-gray-200 text-gray-800"
       }`}
     >
-      <div>Logo</div>
+      <div>
+        <p className="font-dance font-semibold">ADP Studio</p>
+      </div>
       <div className="flex items-center">
-        <span className="mr-4">{isDarkMode ? "Light Mode" : "Dark Mode"}</span>
         <button onClick={toggleDarkMode} className="text-yellow-500">
           {showIconButton()}
+          <span className="m-4 font-dance font-semibold">
+            {isDarkMode ? "Light" : "Dark"}
+          </span>
         </button>
       </div>
     </nav>
