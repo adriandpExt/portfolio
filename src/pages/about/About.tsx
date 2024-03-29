@@ -1,11 +1,29 @@
-import { ReactElement } from "react";
+import { ReactElement, ReactNode } from "react";
 import { motion } from "framer-motion";
 import { toggleLightTheme } from "../../components/utils";
 import me from "../../assets/image/me_id.png";
+import { IconName, SvgIcons } from "../../components";
 
 interface AboutProps {
   isDarkMode: boolean;
 }
+
+const iconName: IconName[] = ["ic_facebook", "ic_github", "ic_linkedin"];
+
+const renderSvg = (): ReactNode => {
+  const icon = iconName.map((iconNames) => {
+    return (
+      <div className="inline-block px-4 py-3 ">
+        <SvgIcons
+          name={iconNames}
+          className="rounded-full 
+        bg-gray-200 text-gray-800"
+        />
+      </div>
+    );
+  });
+  return icon;
+};
 
 const About = ({ isDarkMode }: AboutProps): ReactElement => {
   return (
@@ -13,15 +31,17 @@ const About = ({ isDarkMode }: AboutProps): ReactElement => {
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center">
         <div className="max-w-lg mx-auto">
           <p className="text-base md:text-lg lg:text-xl text-ellipsis ">
-            Welcome to my corner of the web! I'm Adrian Del Prado, a dedicated
-            Front-End Developer who thrives on bringing digital experiences to
-            life. With a keen eye for design and a love for clean, intuitive
-            user interfaces, I'm committed to crafting websites that not only
-            look stunning but also provide seamless functionality.
+            Welcome to my corner of the web!{" "}
+            <span className="text-4xl font-semibold">I'm Adrian Del Prado</span>
+            , a dedicated Front-End Developer who thrives on bringing digital
+            experiences to life. With a keen eye for design and a love for
+            clean, intuitive user interfaces, I'm committed to crafting websites
+            that not only look stunning but also provide seamless functionality.
           </p>
         </div>
+
         <motion.div
-          className="max-w-lg mx-auto"
+          className="max-w-lg mx-auto rounded-3xl border-l-4 border-r-4 border-t-1 border-b-1 border-yellow-500 flex items-center justify-center"
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
@@ -35,6 +55,8 @@ const About = ({ isDarkMode }: AboutProps): ReactElement => {
           />
         </motion.div>
       </section>
+
+      {renderSvg()}
     </section>
   );
 };

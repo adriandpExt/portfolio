@@ -29,8 +29,8 @@ const Home = (props: HomeProps): ReactElement => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.9, delay: 0.5 }}
         >
-          <h1 className="text-6xl font-extrabold tracking-tighter font-dance text-center">
-            Hi! I'm Adrian Del Prado.
+          <h1 className="text-6xl font-extrabold tracking-tighter font-dance">
+            Hi! I'm a Frontend Developer.
           </h1>
           <p className="mt-2 text-xl">Discover amazing things here!</p>
         </motion.div>
