@@ -1,15 +1,13 @@
+import type { HomeProps } from "./types";
+
 import { ReactElement } from "react";
 import { motion } from "framer-motion";
 
 import KeyboardDoubleArrowDownOutlinedIcon from "@mui/icons-material/KeyboardDoubleArrowDownOutlined";
 import { toggleDarkTheme } from "../../components/utils";
 
-interface HomeProps {
-  isDarkMode: boolean;
-}
-
 const Home = (props: HomeProps): ReactElement => {
-  const { isDarkMode } = props;
+  const { isDarkMode, toggleNextPage } = props;
 
   const handleToggleDropIcon = (isDarkMode: boolean) => {
     return isDarkMode
@@ -20,6 +18,7 @@ const Home = (props: HomeProps): ReactElement => {
   return (
     <>
       <section
+        id="/"
         className={`py-8 h-screen flex flex-col justify-center items-center ${toggleDarkTheme(
           isDarkMode
         )}`}
@@ -40,6 +39,7 @@ const Home = (props: HomeProps): ReactElement => {
           transition={{ duration: 0.5, delay: 1 }}
           className={`mt-8 animate-bounce cursor-pointer z-10 rounded-2xl shadow-md
           p-3 ${handleToggleDropIcon(isDarkMode)}`}
+          onClick={toggleNextPage}
         >
           <KeyboardDoubleArrowDownOutlinedIcon fontSize="large" />
         </motion.div>

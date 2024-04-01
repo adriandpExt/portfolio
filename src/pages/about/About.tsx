@@ -1,38 +1,38 @@
+import type { AboutProps } from "./types";
+
 import { ReactElement, ReactNode } from "react";
 import { motion } from "framer-motion";
+
+import { SvgIcons } from "../../components";
 import { toggleLightTheme } from "../../components/utils";
+
 import me from "../../assets/image/me_id.png";
-import { IconName, SvgIcons } from "../../components";
 
-interface AboutProps {
-  isDarkMode: boolean;
-}
-
-const iconName: IconName[] = ["ic_facebook", "ic_github", "ic_linkedin"];
+import { iconName } from "./utils";
 
 const renderSvg = (): ReactNode => {
   const icon = iconName.map((iconNames) => {
-    return (
-      <div className="inline-block px-4 py-3 ">
-        <SvgIcons
-          name={iconNames}
-          className="rounded-full 
-        bg-gray-200 text-gray-800"
-        />
-      </div>
-    );
+    return <SvgIcons name={iconNames} className="m-2" color="secondary" />;
   });
   return icon;
 };
 
-const About = ({ isDarkMode }: AboutProps): ReactElement => {
+const About = (props: AboutProps): ReactElement => {
+  const { isDarkMode } = props;
+
   return (
-    <section className={`${toggleLightTheme(isDarkMode)} py-4 px-8 h-screen`}>
+    <section
+      id="about"
+      className={`${toggleLightTheme(isDarkMode)} py-4 px-8 h-screen`}
+    >
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center">
         <div className="max-w-lg mx-auto">
-          <p className="text-base md:text-lg lg:text-xl text-ellipsis ">
-            Welcome to my corner of the web!{" "}
-            <span className="text-4xl font-semibold">I'm Adrian Del Prado</span>
+          <p className="text-base md:text-md lg:text-lg text-ellipsis ">
+            Welcome to my corner of the web!
+            <span className="text-3xl font-semibold">
+              {" "}
+              I'm Adrian Del Prado
+            </span>
             , a dedicated Front-End Developer who thrives on bringing digital
             experiences to life. With a keen eye for design and a love for
             clean, intuitive user interfaces, I'm committed to crafting websites
@@ -41,7 +41,7 @@ const About = ({ isDarkMode }: AboutProps): ReactElement => {
         </div>
 
         <motion.div
-          className="max-w-lg mx-auto rounded-3xl border-l-4 border-r-4 border-t-1 border-b-1 border-yellow-500 flex items-center justify-center"
+          className="max-w-md mx-auto mt-1 rounded-2xl border-l-4 border-r-4 border-t-1 border-b-1 border-yellow-500 flex items-center justify-center"
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
@@ -51,12 +51,14 @@ const About = ({ isDarkMode }: AboutProps): ReactElement => {
             alt="Adrian Del Prado"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            style={{ height: "50%", width: "60%" }}
+            style={{ height: "50%", width: "50%" }}
           />
         </motion.div>
-      </section>
 
-      {renderSvg()}
+        <div className={`inline-flex justify-center items-center`}>
+          {renderSvg()}
+        </div>
+      </section>
     </section>
   );
 };
