@@ -6,6 +6,7 @@ import { Appbar } from "./components";
 
 import Home from "./pages/home";
 import About from "./pages/about";
+import Contact from "./pages/contact";
 
 const App = (): ReactElement => {
   const [showScroll, setShowScroll] = useState(false);
@@ -44,7 +45,7 @@ const App = (): ReactElement => {
         <Appbar isDarkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Home isDarkMode={darkMode} toggleNextPage={scrollToAboutPage} />
         <About isDarkMode={darkMode} />
-        <Home isDarkMode={darkMode} toggleNextPage={scrollToAboutPage} />
+        <Contact isDarkMode={darkMode} />
       </>
     );
   };
