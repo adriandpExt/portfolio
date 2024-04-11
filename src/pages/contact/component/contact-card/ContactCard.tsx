@@ -13,14 +13,14 @@ export const ContactCard = (props: ContactCardProps): ReactElement => {
   const { content, iconName, link, islink = true } = props;
 
   return (
-    <div className="block text-center gap-4">
+    <div className="flex items-center gap-4 text-lg">
       <SvgIcons name={iconName} />
       {islink ? (
         <a href={link} target="_blank">
           {content}
         </a>
       ) : (
-        <p className="text-2xl">{content}</p>
+        <p className="text-2xl font-bold whitespace-pre-wrap">{content}</p>
       )}
     </div>
   );

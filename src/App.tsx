@@ -1,8 +1,6 @@
 import { ReactElement, useState } from "react";
 
-import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
-
-import { Appbar } from "./components";
+import { Appbar, ScrollToTop } from "./components";
 
 import Home from "./pages/home";
 import About from "./pages/about";
@@ -55,12 +53,7 @@ const App = (): ReactElement => {
       {renderPages()}
 
       {showScroll && (
-        <div
-          className="fixed bottom-4 right-4 cursor-pointer z-10 rounded-full bg-white shadow-md p-3 scroll-smooth"
-          onClick={scrollTop}
-        >
-          <KeyboardDoubleArrowUpIcon />
-        </div>
+        <ScrollToTop handleScrollTop={scrollTop} isDarkMode={darkMode} />
       )}
     </>
   );

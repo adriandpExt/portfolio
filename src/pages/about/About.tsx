@@ -1,21 +1,19 @@
 import type { AboutProps } from "./types";
 
-import { ReactElement, ReactNode } from "react";
+import { ReactElement } from "react";
 import { motion } from "framer-motion";
 
-import { SvgIcons } from "../../components";
+// import { SvgIcons } from "../../components";
 import { toggleLightTheme } from "../../components/utils";
 
 import me from "../../assets/image/me_id.png";
 
-import { iconName } from "./utils";
-
-const renderSvg = (): ReactNode => {
-  const icon = iconName.map((iconNames) => {
-    return <SvgIcons name={iconNames} className="m-2" color="secondary" />;
-  });
-  return icon;
-};
+// const renderSvg = (): ReactNode => {
+//   const icon = iconName.map((iconNames) => {
+//     return <SvgIcons name={iconNames} className="m-2" color="secondary" />;
+//   });
+//   return icon;
+// };
 
 const About = (props: AboutProps): ReactElement => {
   const { isDarkMode } = props;
@@ -25,7 +23,7 @@ const About = (props: AboutProps): ReactElement => {
       id="about"
       className={`${toggleLightTheme(isDarkMode)} py-4 px-8 h-screen`}
     >
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center mt-10">
         <div className="max-w-lg mx-auto">
           <p className="text-base md:text-md lg:text-lg text-ellipsis ">
             Welcome to my corner of the web!
@@ -54,10 +52,6 @@ const About = (props: AboutProps): ReactElement => {
             style={{ height: "50%", width: "50%" }}
           />
         </motion.div>
-
-        <div className={`inline-flex justify-center items-center`}>
-          {renderSvg()}
-        </div>
       </section>
     </section>
   );

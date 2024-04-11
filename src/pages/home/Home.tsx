@@ -4,16 +4,10 @@ import { ReactElement } from "react";
 import { motion } from "framer-motion";
 
 import KeyboardDoubleArrowDownOutlinedIcon from "@mui/icons-material/KeyboardDoubleArrowDownOutlined";
-import { toggleDarkTheme } from "../../components/utils";
+import { handleToggleDropIcon, toggleDarkTheme } from "../../components/utils";
 
 const Home = (props: HomeProps): ReactElement => {
   const { isDarkMode, toggleNextPage } = props;
-
-  const handleToggleDropIcon = (isDarkMode: boolean) => {
-    return isDarkMode
-      ? "bg-gray-200  text-gray-800"
-      : "bg-gray-900  text-white";
-  };
 
   return (
     <>
@@ -31,6 +25,7 @@ const Home = (props: HomeProps): ReactElement => {
           <h1 className="text-6xl font-extrabold tracking-tighter font-dance">
             Hi! I'm a Frontend Developer.
           </h1>
+
           <p className="mt-2 text-xl">Discover amazing things here!</p>
         </motion.div>
         <motion.div
