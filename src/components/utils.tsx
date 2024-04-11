@@ -5,3 +5,7 @@ export const toggleDarkTheme = (isDarkMode: boolean) => {
 export const toggleLightTheme = (isDarkMode: boolean) => {
   return isDarkMode ? "bg-gray-200 text-gray-800" : "bg-gray-900 text-white";
 };
+
+export const handleToggleDropIcon = (isDarkMode: boolean) => {
+  return isDarkMode ? "bg-gray-200  text-gray-800" : "bg-gray-900  text-white";
+};
