@@ -3,8 +3,6 @@ import { ReactElement, ReactNode } from "react";
 import NightlightRoundOutlinedIcon from "@mui/icons-material/NightlightRoundOutlined";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 
-import { toggleDarkTheme } from "../utils";
-
 interface AppbarProps {
   toggleDarkMode: () => void;
   isDarkMode: boolean;
@@ -23,9 +21,7 @@ export const Appbar = (props: AppbarProps): ReactElement => {
 
   return (
     <nav
-      className={`flex justify-between items-center py-4 px-8  ${toggleDarkTheme(
-        isDarkMode
-      )}`}
+      className={`flex justify-between items-center py-4 px-8 bg-transparent`}
     >
       <div>
         <p className="text-3xl font-bold">ADP Studio</p>

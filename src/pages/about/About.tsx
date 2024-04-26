@@ -3,17 +3,10 @@ import type { AboutProps } from "./types";
 import { ReactElement } from "react";
 import { motion } from "framer-motion";
 
-// import { SvgIcons } from "../../components";
 import { toggleLightTheme } from "../../components/utils";
 
 import me from "../../assets/image/me_id.png";
-
-// const renderSvg = (): ReactNode => {
-//   const icon = iconName.map((iconNames) => {
-//     return <SvgIcons name={iconNames} className="m-2" color="secondary" />;
-//   });
-//   return icon;
-// };
+import { Skill } from "./component/skill";
 
 const About = (props: AboutProps): ReactElement => {
   const { isDarkMode } = props;
@@ -21,9 +14,10 @@ const About = (props: AboutProps): ReactElement => {
   return (
     <section
       id="about"
-      className={`${toggleLightTheme(isDarkMode)} py-4 px-8 h-screen`}
+      className={`${toggleLightTheme(isDarkMode)} py-4 px-8 h-full`}
     >
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center mt-10">
+      <h5 className="text-center font-serif font-extrabold text-3xl">ABOUT</h5>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center mt-10">
         <div className="max-w-lg mx-auto">
           <p className="text-base md:text-md lg:text-lg text-ellipsis ">
             Welcome to my corner of the web!
@@ -52,7 +46,9 @@ const About = (props: AboutProps): ReactElement => {
             style={{ height: "50%", width: "50%" }}
           />
         </motion.div>
-      </section>
+      </div>
+
+      <Skill />
     </section>
   );
 };

@@ -1,8 +1,8 @@
 import { ReactElement } from "react";
 
-import { toggleDarkTheme } from "../../components/utils";
+import { toggleLightTheme } from "../../components/utils";
 
-import { ContactCard } from "./component";
+import { Form } from "./component";
 
 interface ContactProps {
   isDarkMode: boolean;
@@ -14,25 +14,16 @@ const Contact = (props: ContactProps): ReactElement => {
   return (
     <section
       id="contact"
-      className={`${toggleDarkTheme(isDarkMode)} py-4 px-8 h-screen`}
+      className={`${toggleLightTheme(isDarkMode)} py-4 px-8 h-full`}
     >
-      <h1 className="text-3xl text-center mt-6">Contact Us</h1>
+      <h5 className="text-center font-serif font-extrabold text-3xl">
+        WORK EXPERIENCE
+      </h5>
 
-      <div className="grid grid-cols-2 gap-4 mt-32">
-        <ContactCard content="+63 926 391 2007" iconName={"ic_mobile"} />
-        <ContactCard
-          islink
-          link="https://www.linkedin.com/in/adrian-del-prado-285aa81b8/"
-          content="adrian-del-prado-285aa81b8"
-          iconName={"ic_linkedin"}
-        />
-        <ContactCard
-          islink
-          link="https://github.com/adriandpExt"
-          content="adriandpExt"
-          iconName={"ic_github"}
-        />
-        <ContactCard content="adriandp52@gmail.com" iconName={"ic_gmail"} />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center mt-10">
+        <Form />
+
+        <div>test</div>
       </div>
     </section>
   );

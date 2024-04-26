@@ -2,13 +2,7 @@ import type { ReactElement } from "react";
 import type { SvgIconProps as MuiSvgIconProps } from "@mui/material/SvgIcon";
 
 import MuiSvgIcon from "@mui/material/SvgIcon";
-
-export type IconName =
-  | "ic_gmail"
-  | "ic_mobile"
-  | "ic_facebook"
-  | "ic_github"
-  | "ic_linkedin";
+import { IconName } from "./utils";
 
 type SvgIconProps = {
   name: IconName;
