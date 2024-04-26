@@ -15,7 +15,7 @@ const Home = (props: HomeProps): ReactElement => {
         id="/"
         className={`py-8 h-screen bg-cover bg-center bg-fixed flex flex-col justify-center items-center `}
         style={{
-          backgroundImage: "url(src/assets/image/intro_bg.jpg)",
+          backgroundImage: "url(src/assets/image/intro_bg.png)",
         }}
       >
         <motion.div
