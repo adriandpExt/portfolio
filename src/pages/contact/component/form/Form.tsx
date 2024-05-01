@@ -20,7 +20,8 @@ export const Form = () => {
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      console.log("submit", values);
+      bookTestForm.resetForm();
     },
   });
 
