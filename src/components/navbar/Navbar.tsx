@@ -54,7 +54,7 @@ const StyledAppBar = styled(AppBar)({
 const menuItems = [
   { listIcon: <HomeIcon />, listText: "Home", listPath: "/" },
   { listIcon: <AssignmentIndIcon />, listText: "Resume", listPath: "/cv" },
-  { listIcon: <AppsIcon />, listText: "Portfolio", listPath: "/portfolio" },
+  { listIcon: <AppsIcon />, listText: "Portfolio", listPath: "/project" },
   { listIcon: <ContactMailIcon />, listText: "Contact", listPath: "/contact" },
 ];
 

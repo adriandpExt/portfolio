@@ -15,7 +15,7 @@ export const routesConfig: RouteType[] = [
     element: <Resume />,
   },
   {
-    path: "/portfolio",
+    path: "/project",
     element: <Portfolio />,
   },
   {
