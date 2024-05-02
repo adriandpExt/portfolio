@@ -7,7 +7,7 @@ import Contacts from "../components/contacts/Contacts";
 
 export const routesConfig: RouteType[] = [
   {
-    path: "/",
+    path: "/portfolio",
     element: <Home />,
   },
   {
