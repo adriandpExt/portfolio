@@ -31,13 +31,13 @@ export const Header = () => {
       <Grid container sx={{ justifyContent: "center" }}>
         {/* <StyledAvatar src={avatar} alt="Adrian" /> */}
       </Grid>
-      <Typography sx={{ color: "#FF6347" }} variant="h4">
+      <Typography sx={{ color: "#FF6347" }} variant="h2">
         <ReactTyped strings={["Adrian Del Prado"]} typeSpeed={40} />
       </Typography>
 
       <Typography
-        sx={{ color: "tan", textTransform: "uppercase" }}
-        variant="h5"
+        sx={{ color: "#ffffff", textTransform: "uppercase" }}
+        variant="h4"
       >
         <ReactTyped
           strings={["Frontend Developer", "React", "Vue"]}
