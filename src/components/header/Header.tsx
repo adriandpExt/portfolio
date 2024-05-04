@@ -1,50 +1,75 @@
 import { styled } from "@mui/material/styles";
 
 import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-// import Avatar from "@mui/material/Avatar";
 
-// import avatar from "../../assets/me_id.png";
+import Box from "@mui/material/Box";
 
 import { ReactTyped } from "react-typed";
+import introBg from "../../assets/image/intro_bg.png";
 
-const StyledBox = styled(Box)({
+const StyledBox = styled(Box)(({ theme }) => ({
   position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%,-50%)",
-  width: "100vw",
-  textAlign: "center",
-  zIndex: 1,
-});
-
-// const StyledAvatar = styled(Avatar)({
-//   width: "5rem",
-//   height: "5rem",
-//   margin: "1rem",
-// });
+  width: "100%",
+  height: "90vh",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  color: theme.palette.common.white,
+  "&::before": {
+    content: "''",
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    backgroundImage: `url(${introBg})`,
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    filter: "grayscale(100%)",
+    zIndex: -1,
+  },
+}));
 
 export const Header = () => {
   return (
     <StyledBox>
-      <Grid container sx={{ justifyContent: "center" }}>
-        {/* <StyledAvatar src={avatar} alt="Adrian" /> */}
-      </Grid>
-      <Typography sx={{ color: "#FF6347" }} variant="h2">
+      <Typography
+        sx={{
+          color: "#FF6347",
+          textAlign: "center",
+          fontWeight: 500,
+        }}
+        variant="h2"
+      >
         <ReactTyped strings={["Adrian Del Prado"]} typeSpeed={40} />
       </Typography>
 
       <Typography
-        sx={{ color: "#ffffff", textTransform: "uppercase" }}
-        variant="h4"
+        sx={{
+          textAlign: "center",
+          backgroundColor: "#000",
+        }}
+        variant="h5"
       >
-        <ReactTyped
-          strings={["Frontend Developer", "React", "Vue"]}
-          typeSpeed={40}
-          backSpeed={50}
-          loop
-        />
+        I am a
+        <span
+          style={{
+            margin: "0 0.5rem",
+            fontWeight: 600,
+            background:
+              "-webkit-linear-gradient(45deg, #C0C0C0, #808080, #0D47A1, #2196F3, #800080, #FF6347)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
+        >
+          <ReactTyped
+            strings={["FRONTEND DEVELOPER", " SOFTWARE DEVELOPER"]}
+            typeSpeed={30}
+            backSpeed={30}
+            loop
+          />
+        </span>
       </Typography>
     </StyledBox>
   );

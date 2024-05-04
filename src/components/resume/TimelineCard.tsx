@@ -3,12 +3,14 @@ import Typography from "@mui/material/Typography";
 
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
-
-interface TimelineCardProps {
+interface Timeline {
   jobtitle: string;
   year: string;
   description: string;
   companyName: string;
+}
+interface TimelineCardProps {
+  details: Timeline;
 }
 
 const StyledBox = styled(Container)({
@@ -17,7 +19,7 @@ const StyledBox = styled(Container)({
 });
 
 export const TimelineCard = (props: TimelineCardProps) => {
-  const { jobtitle, description, year, companyName } = props;
+  const { details } = props;
   return (
     <StyledBox maxWidth="sm">
       <Grid container spacing={1}>
@@ -28,15 +30,15 @@ export const TimelineCard = (props: TimelineCardProps) => {
             color="whitesmoke"
             sx={{ fontWeight: 600 }}
           >
-            {year}
+            {details.year}
           </Typography>
         </Grid>
         <Grid item xs={12}>
           <Typography variant="h6" gutterBottom color="whitesmoke">
-            {jobtitle}
+            {details.jobtitle}
           </Typography>
           <Typography variant="caption" gutterBottom color="whitesmoke">
-            {companyName}
+            {details.companyName}
           </Typography>
         </Grid>
         <Grid item xs={12}>
@@ -46,7 +48,7 @@ export const TimelineCard = (props: TimelineCardProps) => {
             sx={{ whiteSpace: "wrap" }}
             color="whitesmoke"
           >
-            {description}
+            {details.description}
           </Typography>
         </Grid>
       </Grid>

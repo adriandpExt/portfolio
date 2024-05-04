@@ -7,14 +7,17 @@ import {
   Typography,
   CardActions,
   Button,
+  Divider,
 } from "@mui/material";
 
+interface Project {
+  image: string[];
+  name: string;
+  description: string;
+}
 interface ProjectCardProps {
-  project: {
-    image: string;
-    name: string;
-    description: string;
-  };
+  project: Project;
+  onView: (project: Project) => void;
 }
 const StyledCardContainer = styled(Card)({
   maxWidth: 345,
@@ -22,29 +25,36 @@ const StyledCardContainer = styled(Card)({
 });
 
 export const ProjectCard = (props: ProjectCardProps) => {
-  const { project } = props;
+  const { project, onView } = props;
+
+  const handleView = () => {
+    onView(project);
+  };
 
   return (
-    <StyledCardContainer>
+    <StyledCardContainer onClick={handleView}>
       <CardActionArea>
         <CardMedia
           component="img"
-          alt="Project 1"
+          alt={project.name}
           height="140"
-          image={project.image}
+          image={project?.image[0]}
         />
         <CardContent>
           <Typography variant="h5" gutterBottom>
             {project.name}
           </Typography>
           <Typography variant="body2" color="textSecondary">
-            {project.description}
+            {project.description.length > 100
+              ? `${project.description.substring(0, 100).trim()}...`
+              : project.description}
           </Typography>
         </CardContent>
+        <Divider />
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          Share
+        <Button size="small" color="primary" onClick={handleView}>
+          LEARN MORE
         </Button>
       </CardActions>
     </StyledCardContainer>

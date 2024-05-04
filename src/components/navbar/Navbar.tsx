@@ -53,9 +53,26 @@ const StyledAppBar = styled(AppBar)({
 
 const menuItems = [
   { listIcon: <HomeIcon />, listText: "Home", listPath: "/portfolio " },
-  { listIcon: <AssignmentIndIcon />, listText: "Resume", listPath: "/cv" },
-  { listIcon: <AppsIcon />, listText: "Portfolio", listPath: "/project" },
-  { listIcon: <ContactMailIcon />, listText: "Contact", listPath: "/contact" },
+  {
+    listIcon: <AssignmentIndIcon />,
+    listText: "Resume",
+    listPath: "/portfolio/cv",
+  },
+  {
+    listIcon: <AppsIcon />,
+    listText: "About",
+    listPath: "/portfolio/about",
+  },
+  {
+    listIcon: <AppsIcon />,
+    listText: "Projects",
+    listPath: "/portfolio/project",
+  },
+  {
+    listIcon: <ContactMailIcon />,
+    listText: "Contact",
+    listPath: "/portfolio/contact",
+  },
 ];
 
 export const Navbar = () => {
@@ -97,6 +114,7 @@ export const Navbar = () => {
                 variant="h5"
                 sx={{
                   color: "tan",
+                  fontFamily: "cursive",
                 }}
               >
                 ADRIAN

@@ -6,10 +6,17 @@ import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 
 import SendIcon from "@mui/icons-material/Send";
+import CallIcon from "@mui/icons-material/Call";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import EmailIcon from "@mui/icons-material/Email";
+
+import BottomNavigation from "@mui/material/BottomNavigation";
+import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 
 const StyledContactContainer = styled(Box)({
   background: "#233",
-  height: "100vh",
+  height: "100%",
 });
 
 const InputField = styled(TextField)({
@@ -36,17 +43,35 @@ const InputField = styled(TextField)({
   },
 });
 
-export const Contact = () => {
+const StyledBottomNavigation = styled(BottomNavigation)({
+  background: "#233",
+  height: "55px",
+  overflow: "auto",
+  marginTop: "5rem",
+});
+
+const StyledBottomNavigationAction = styled(BottomNavigationAction)({
+  "& .MuiSvgIcon-root": {
+    fill: "tan",
+    "&:hover": {
+      fill: "tomato",
+      fontSize: "1.8rem",
+    },
+  },
+});
+
+export const Contacts = () => {
   return (
-    <StyledContactContainer component="div">
+    <StyledContactContainer>
       <Grid container>
         <Box
           component="form"
           sx={{
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            position: "absolute",
+            position: "relative", // Change from absolute to relative
+            margin: "auto", // Center the form horizontally
+            maxWidth: "400px", // Limit the form's width
+            textAlign: "center", // Center the content inside the form
+            pt: "50px", // Add some padding at the top to make space for the bottom navigation
           }}
         >
           <Typography
@@ -83,9 +108,17 @@ export const Contact = () => {
             Contact Me
           </Button>
         </Box>
+        <Grid item xs={12}>
+          <StyledBottomNavigation>
+            <StyledBottomNavigationAction icon={<FacebookIcon />} />
+            <StyledBottomNavigationAction icon={<LinkedInIcon />} />
+            <StyledBottomNavigationAction icon={<EmailIcon />} />
+            <StyledBottomNavigationAction icon={<CallIcon />} />
+          </StyledBottomNavigation>
+        </Grid>
       </Grid>
     </StyledContactContainer>
   );
 };
 
-export default Contact;
+export default Contacts;

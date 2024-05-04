@@ -6,13 +6,15 @@ import { IconName } from "./utils";
 
 type SvgIconProps = {
   name: IconName;
+  width?: number;
+  height?: number;
 } & MuiSvgIconProps;
 
 export const SvgIcons = (props: SvgIconProps): ReactElement => {
-  const { name, ...rest } = props;
+  const { name, width = 50, height = 50, ...rest } = props;
 
   return (
-    <MuiSvgIcon {...rest} sx={{ width: 50, height: 50 }}>
+    <MuiSvgIcon {...rest} sx={{ width: { width }, height: { height } }}>
       <svg aria-hidden="true">
         <use href={`#icon-${name}`} />
       </svg>

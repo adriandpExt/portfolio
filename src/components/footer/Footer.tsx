@@ -10,7 +10,7 @@ import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 const StyledBottomNavigation = styled(BottomNavigation)({
   background: "#222",
   height: "55px",
-  overflow: "hidden",
+  overflow: "auto",
 });
 
 const StyledBottomNavigationAction = styled(BottomNavigationAction)({

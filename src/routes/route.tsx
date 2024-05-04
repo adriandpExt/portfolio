@@ -1,9 +1,5 @@
+import { About, Contacts, Home, Portfolio, Resume } from "../components";
 import { RouteType } from "./types";
-
-import { Home } from "../components/home";
-import Resume from "../components/resume/Resume";
-import { Portfolio } from "../components/portfolio";
-import Contacts from "../components/contacts/Contacts";
 
 export const routesConfig: RouteType[] = [
   {
@@ -11,15 +7,19 @@ export const routesConfig: RouteType[] = [
     element: <Home />,
   },
   {
-    path: "/cv",
+    path: "/portfolio/about",
+    element: <About />,
+  },
+  {
+    path: "/portfolio/cv",
     element: <Resume />,
   },
   {
-    path: "/project",
+    path: "/portfolio/project",
     element: <Portfolio />,
   },
   {
-    path: "/contact",
+    path: "/portfolio/contact",
     element: <Contacts />,
   },
 ];

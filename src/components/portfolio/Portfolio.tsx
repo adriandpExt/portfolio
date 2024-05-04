@@ -1,52 +1,49 @@
+import { useState } from "react";
+
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 
-import avatar from "../../assets/image/avatar.png";
 import ProjectCard from "./ProjectCard";
+import { projects } from "./utils";
+import ViewModal from "./ViewModal";
 
 const StyledMainContainer = styled(Box)({
   background: "#233",
   height: "100%",
 });
 
-const projects = [
-  {
-    name: "Project 1",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis
-    consequatur magni quod nesciunt necessitatibus molestiae non
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus
-    iste alias sunt veritatis nisi dolores!`,
-    image: avatar,
-  },
-  {
-    name: "Project 2",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
-    consequatur magni quod nesciunt necessitatibus molestiae non\
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus\
-    iste alias sunt veritatis nisi dolores!`,
-    image: avatar,
-  },
-  {
-    name: "Project 3",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
-    consequatur magni quod nesciunt necessitatibus molestiae non\
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus\
-    iste alias sunt veritatis nisi dolores!`,
-    image: avatar,
-  },
-];
-
+interface Project {
+  image: string[];
+  name: string;
+  description: string;
+}
 export const Portfolio = () => {
+  const [viewProject, setViewProject] = useState<boolean>(false);
+  const [projectCard, setProjectCard] = useState<Project | null>(null);
+
+  const handleView = (project: Project) => {
+    setProjectCard(project);
+    setViewProject(true);
+  };
+  const handleClose = () => {
+    setViewProject(false);
+  };
   return (
-    <StyledMainContainer component="div">
+    <StyledMainContainer>
       <Grid container>
         {projects.map((project, i) => (
           <Grid item xs={12} sm={8} md={4} key={i}>
-            <ProjectCard project={project} />
+            <ProjectCard project={project} onView={handleView} />
           </Grid>
         ))}
       </Grid>
+
+      <ViewModal
+        open={viewProject}
+        project={projectCard}
+        onClose={handleClose}
+      />
     </StyledMainContainer>
   );
 };
