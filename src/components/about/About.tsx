@@ -1,11 +1,13 @@
-import { Grid, Stack, useMediaQuery, useTheme } from "@mui/material";
+import { ReactNode } from "react";
+import { Button, Grid, Stack, useMediaQuery, useTheme } from "@mui/material";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
 import me from "../../assets/image/me_id.png";
 import { SvgIcons } from "../svg-icons";
 import { IconName } from "../svg-icons/utils";
-import { ReactNode } from "react";
+
+import cvDownload from "../../../public/cv/AdrianDelPrado_CV.pdf";
 
 const iconName: IconName[] = [
   "ic_react",
@@ -19,6 +21,19 @@ const iconName: IconName[] = [
 export const About = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+
+  const handleDownload = () => {
+    return (
+      <a href={cvDownload} download={"adrian_del_prado_cv.pdf"} target="_blank">
+        <Button
+          variant="outlined"
+          sx={{ color: "#FF6347", border: "1px solid #FF6347" }}
+        >
+          CV DOWNLOAD
+        </Button>
+      </a>
+    );
+  };
 
   const renderStack = (): ReactNode => {
     return (
@@ -60,6 +75,8 @@ export const About = () => {
       }}
     >
       <Grid item xs={12} sm={9}>
+        {handleDownload()}
+
         <Typography color="#FFF" variant="h6" sx={{ fontFamily: "cursive" }}>
           Hello! I'm Adrian, and I like learning things and building them. The
           reason why I chose web development was that there was a lot to learn
