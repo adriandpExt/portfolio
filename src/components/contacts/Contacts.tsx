@@ -1,4 +1,8 @@
+import type { ContactForm } from "./types";
+
 import { useDispatch } from "react-redux";
+import { useFormik } from "formik";
+import * as yup from "yup";
 
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
@@ -17,6 +21,7 @@ import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 
 import { facebookinUrl, linkedinUrl } from "../../redux/reducer/linkReducers";
+import { contacSubmit } from "../../redux/reducer/contactReducers";
 
 const StyledContactContainer = styled(Box)({
   background: "#233",
@@ -79,11 +84,27 @@ export const Contacts = () => {
     dispatch(facebookinUrl(facebook));
   };
 
+  const validationSchema = yup.object<ContactForm>({
+    fullname: yup.string().required("Fullname is required"),
+    email: yup.string().required("emailis required"),
+    message: yup.string().required("message type is required"),
+  });
+
+  const form = useFormik<ContactForm>({
+    initialValues: {
+      fullname: "",
+      email: "",
+      message: "",
+    },
+    validationSchema: validationSchema,
+    onSubmit: (values) => {
+      console.log("submit", dispatch(contacSubmit(values)));
+    },
+  });
   return (
     <StyledContactContainer>
       <Grid container>
         <Box
-          component="form"
           sx={{
             position: "relative",
             margin: "auto",
@@ -92,40 +113,63 @@ export const Contacts = () => {
             pt: "50px",
           }}
         >
-          <Typography
-            variant="h5"
-            sx={{
-              color: "tomato",
-              textAlign: "center",
-              textTransform: "uppercase",
-              marginBottom: "1rem",
-            }}
-          >
-            Hire or Contact me...
-          </Typography>
-          <InputField fullWidth={true} label="Name" variant="outlined" />
-          <InputField
-            fullWidth={true}
-            label="Email"
-            variant="outlined"
-            sx={{ margin: "1rem 0rem" }}
-          />
-          <InputField
-            fullWidth={true}
-            label="Message"
-            variant="outlined"
-            multiline
-            rows={4}
-          />
-          <Button
-            variant="outlined"
-            fullWidth={true}
-            endIcon={<SendIcon />}
-            sx={{ marginTop: "1rem", color: "tomato", borderColor: "tan" }}
-          >
-            Contact Me
-          </Button>
+          <form onSubmit={form.handleSubmit}>
+            <Typography
+              variant="h5"
+              sx={{
+                color: "tomato",
+                textAlign: "center",
+                textTransform: "uppercase",
+                marginBottom: "1rem",
+              }}
+            >
+              Hire or Contact me...
+            </Typography>
+            <InputField
+              fullWidth={true}
+              label="Fullname"
+              name="fullname"
+              variant="outlined"
+              value={form.values.fullname}
+              onChange={form.handleChange}
+              error={form.touched.fullname && Boolean(form.errors.fullname)}
+              helperText={form.touched.fullname && form.errors.fullname}
+            />
+            <InputField
+              fullWidth={true}
+              label="Email"
+              name="email"
+              variant="outlined"
+              sx={{ margin: "1rem 0rem" }}
+              value={form.values.email}
+              onChange={form.handleChange}
+              error={form.touched.email && Boolean(form.errors.email)}
+              helperText={form.touched.email && form.errors.email}
+            />
+            <InputField
+              fullWidth={true}
+              label="Message"
+              name="message"
+              variant="outlined"
+              value={form.values.message}
+              onChange={form.handleChange}
+              error={form.touched.message && Boolean(form.errors.message)}
+              helperText={form.touched.message && form.errors.message}
+              multiline
+              rows={4}
+            />
+            <Button
+              variant="outlined"
+              type="submit"
+              fullWidth={true}
+              endIcon={<SendIcon />}
+              sx={{ marginTop: "1rem", color: "tomato", borderColor: "tan" }}
+            >
+              Contact Me
+            </Button>
+          </form>
         </Box>
+
         <Grid item xs={12}>
           <StyledBottomNavigation>
             <StyledBottomNavigationAction

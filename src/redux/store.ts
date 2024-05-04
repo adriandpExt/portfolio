@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import linkReducers from "./reducer/linkReducers";
+import contactReducers from "./reducer/contactReducers";
 
 export const store = configureStore({
   reducer: {
     link: linkReducers,
+    contact:contactReducers
   },
 });
 
