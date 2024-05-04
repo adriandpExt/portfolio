@@ -3,10 +3,7 @@ import { Link } from "react-router-dom";
 
 import { styled } from "@mui/material/styles";
 
-import AssignmentIndIcon from "@mui/icons-material/AssignmentInd";
-import HomeIcon from "@mui/icons-material/Home";
 import AppsIcon from "@mui/icons-material/Apps";
-import ContactMailIcon from "@mui/icons-material/ContactMail";
 
 import Box from "@mui/material/Box";
 import {
@@ -26,6 +23,7 @@ import {
 import avatar from "../../assets/image/me_id.png";
 
 import { Footer } from "../footer";
+import { menuItems } from "./utils";
 
 const StyledBox = styled(Box)({
   width: 250,
@@ -51,38 +49,24 @@ const StyledAppBar = styled(AppBar)({
   margin: 0,
 });
 
-const menuItems = [
-  { listIcon: <HomeIcon />, listText: "Home", listPath: "/portfolio " },
-  {
-    listIcon: <AssignmentIndIcon />,
-    listText: "Resume",
-    listPath: "/portfolio/cv",
-  },
-  {
-    listIcon: <AppsIcon />,
-    listText: "About",
-    listPath: "/portfolio/about",
-  },
-  {
-    listIcon: <AppsIcon />,
-    listText: "Projects",
-    listPath: "/portfolio/project",
-  },
-  {
-    listIcon: <ContactMailIcon />,
-    listText: "Contact",
-    listPath: "/portfolio/contact",
-  },
-];
-
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
 
-  const sideList = () => (
-    <StyledBox component="div">
-      <StyledAvatar src={avatar} alt="adrian" />
-      <Divider />
+  const renderInfo = () => {
+    return (
+      <List sx={{ color: "tan" }}>
+        <ListItem>
+          <Typography fontFamily="cursive">adriandp52@gmail.com</Typography>
+        </ListItem>
+        <ListItem>
+          <Typography fontFamily="cursive">+63 926 391 2007</Typography>
+        </ListItem>
+      </List>
+    );
+  };
 
+  const renderList = () => {
+    return (
       <List>
         {menuItems.map((item, index) => (
           <ListItem disablePadding key={index}>
@@ -97,6 +81,15 @@ export const Navbar = () => {
           </ListItem>
         ))}
       </List>
+    );
+  };
+
+  const sideList = () => (
+    <StyledBox component="div">
+      <StyledAvatar src={avatar} alt="adrian" />
+      {renderInfo()}
+      <Divider />
+      {renderList()}
     </StyledBox>
   );
 

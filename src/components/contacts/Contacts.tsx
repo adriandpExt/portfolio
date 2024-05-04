@@ -1,3 +1,5 @@
+import { useDispatch } from "react-redux";
+
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
@@ -13,6 +15,8 @@ import EmailIcon from "@mui/icons-material/Email";
 
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
+
+import { facebookinUrl, linkedinUrl } from "../../redux/reducer/linkReducers";
 
 const StyledContactContainer = styled(Box)({
   background: "#233",
@@ -61,17 +65,31 @@ const StyledBottomNavigationAction = styled(BottomNavigationAction)({
 });
 
 export const Contacts = () => {
+  const dispatch = useDispatch();
+
+  const handleOpenLinkedin = () => {
+    const linkedin = "https://www.linkedin.com/in/adrian-del-prado-285aa81b8";
+    window.open(linkedin, "_blank");
+    dispatch(linkedinUrl(linkedinUrl));
+  };
+
+  const handleOpenFacebook = () => {
+    const facebook = "https://www.facebook.com/adrian.delprado.98";
+    window.open(facebook, "_blank");
+    dispatch(facebookinUrl(facebook));
+  };
+
   return (
     <StyledContactContainer>
       <Grid container>
         <Box
           component="form"
           sx={{
-            position: "relative", // Change from absolute to relative
-            margin: "auto", // Center the form horizontally
-            maxWidth: "400px", // Limit the form's width
-            textAlign: "center", // Center the content inside the form
-            pt: "50px", // Add some padding at the top to make space for the bottom navigation
+            position: "relative",
+            margin: "auto",
+            maxWidth: "400px",
+            textAlign: "center",
+            pt: "50px",
           }}
         >
           <Typography
@@ -110,8 +128,14 @@ export const Contacts = () => {
         </Box>
         <Grid item xs={12}>
           <StyledBottomNavigation>
-            <StyledBottomNavigationAction icon={<FacebookIcon />} />
-            <StyledBottomNavigationAction icon={<LinkedInIcon />} />
+            <StyledBottomNavigationAction
+              icon={<FacebookIcon />}
+              onClick={handleOpenFacebook}
+            />
+            <StyledBottomNavigationAction
+              icon={<LinkedInIcon />}
+              onClick={handleOpenLinkedin}
+            />
             <StyledBottomNavigationAction icon={<EmailIcon />} />
             <StyledBottomNavigationAction icon={<CallIcon />} />
           </StyledBottomNavigation>
@@ -120,5 +144,3 @@ export const Contacts = () => {
     </StyledContactContainer>
   );
 };
-
-export default Contacts;
