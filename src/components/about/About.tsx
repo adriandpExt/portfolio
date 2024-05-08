@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Button, Grid, Stack, useMediaQuery, useTheme } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
@@ -17,11 +17,9 @@ const iconName: IconName[] = [
   "ic_css",
   "ic_bootstrap",
   "ic_material_ui",
+  "ic_typescript",
 ];
 export const About = () => {
-  const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
-
   const handleDownload = () => {
     return (
       <a href={cvDownload} download={"adrian_del_prado_cv.pdf"} target="_blank">
@@ -37,27 +35,23 @@ export const About = () => {
 
   const renderStack = (): ReactNode => {
     return (
-      <Stack
-        gap={2}
-        direction={isSmallScreen ? "column" : "row"}
-        alignItems={isSmallScreen ? "center" : undefined}
-        justifyContent={isSmallScreen ? "center" : undefined}
-        whiteSpace="wrap"
-      >
+      <Grid container spacing={1}>
         {iconName.map((item, id) => (
-          <Box
-            key={id}
-            sx={{
-              padding: "0.5rem",
-              border: "2px solid #FF6347",
-              width: isSmallScreen ? "100%" : "auto",
-              textAlign: isSmallScreen ? "center" : undefined,
-            }}
-          >
-            <SvgIcons name={item} width={80} height={80} />
-          </Box>
+          <Grid item xs={6} sm={4} md={3} lg={2} key={id}>
+            <Box
+              sx={{
+                padding: "0.5rem",
+                border: "2px solid #FF6347",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <SvgIcons name={item} width={80} height={80} />
+            </Box>
+          </Grid>
         ))}
-      </Stack>
+      </Grid>
     );
   };
 

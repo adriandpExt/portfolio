@@ -11,4 +11,5 @@ export type IconName =
   | "ic_javascript"
   | "ic_bootstrap"
   | "ic_material_ui"
-  | "ic_tailwind";
+  | "ic_tailwind"
+  | "ic_typescript";

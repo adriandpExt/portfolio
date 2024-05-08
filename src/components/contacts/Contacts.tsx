@@ -86,8 +86,8 @@ export const Contacts = () => {
 
   const validationSchema = yup.object<ContactForm>({
     fullname: yup.string().required("Fullname is required"),
-    email: yup.string().required("emailis required"),
-    message: yup.string().required("message type is required"),
+    email: yup.string().required("Email is required"),
+    message: yup.string().required("Message type is required"),
   });
 
   const form = useFormik<ContactForm>({

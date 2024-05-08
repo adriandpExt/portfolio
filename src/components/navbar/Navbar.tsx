@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { styled } from "@mui/material/styles";
 
 import AppsIcon from "@mui/icons-material/Apps";
+import EmailIcon from "@mui/icons-material/Email";
+import CallIcon from "@mui/icons-material/Call";
 
 import Box from "@mui/material/Box";
 import {
@@ -26,7 +28,7 @@ import { Footer } from "../footer";
 import { menuItems } from "./utils";
 
 const StyledBox = styled(Box)({
-  width: 250,
+  width: 280,
   background: "#511",
   height: "100%",
 });
@@ -34,8 +36,8 @@ const StyledBox = styled(Box)({
 const StyledAvatar = styled(Avatar)({
   display: "block",
   margin: "0.5rem auto",
-  width: "13rem",
-  height: "13rem",
+  width: "10rem",
+  height: "10rem",
 });
 
 const StyledListItemButton = styled(Link)({
@@ -54,11 +56,17 @@ export const Navbar = () => {
 
   const renderInfo = () => {
     return (
-      <List sx={{ color: "tan" }}>
+      <List sx={{ color: "#D2B48C" }}>
         <ListItem>
+          <ListItemIcon sx={{ color: "#D2B48C" }}>
+            <EmailIcon />
+          </ListItemIcon>
           <Typography fontFamily="cursive">adriandp52@gmail.com</Typography>
         </ListItem>
         <ListItem>
+          <ListItemIcon sx={{ color: "#D2B48C" }}>
+            <CallIcon />
+          </ListItemIcon>
           <Typography fontFamily="cursive">+63 926 391 2007</Typography>
         </ListItem>
       </List>
@@ -70,7 +78,14 @@ export const Navbar = () => {
       <List>
         {menuItems.map((item, index) => (
           <ListItem disablePadding key={index}>
-            <ListItemButton>
+            <ListItemButton
+              sx={{
+                cursor: "pointer",
+                "&:hover": {
+                  backgroundColor: "#FF6347",
+                },
+              }}
+            >
               <ListItemIcon sx={{ color: "#D2B48C" }}>
                 {item.listIcon}
               </ListItemIcon>
