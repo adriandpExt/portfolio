@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { styled } from "@mui/material/styles";
 
@@ -52,6 +52,9 @@ const StyledAppBar = styled(AppBar)({
 });
 
 export const Navbar = () => {
+
+  const navigate =useNavigate();
+
   const [open, setOpen] = useState(false);
 
   const renderInfo = () => {
@@ -79,6 +82,7 @@ export const Navbar = () => {
         {menuItems.map((item, index) => (
           <ListItem disablePadding key={index}>
             <ListItemButton
+            onClick={()=>navigate(item.listPath)}
               sx={{
                 cursor: "pointer",
                 "&:hover": {
