@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ReactElement, ReactNode, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import { styled } from "@mui/material/styles";
@@ -52,12 +52,11 @@ const StyledAppBar = styled(AppBar)({
 });
 
 export const Navbar = () => {
+  const navigate = useNavigate();
 
-  const navigate =useNavigate();
+  const [open, setOpen] = useState<boolean>(false);
 
-  const [open, setOpen] = useState(false);
-
-  const renderInfo = () => {
+  const renderInfo = (): ReactNode => {
     return (
       <List sx={{ color: "#D2B48C" }}>
         <ListItem>
@@ -66,6 +65,7 @@ export const Navbar = () => {
           </ListItemIcon>
           <Typography fontFamily="cursive">adriandp52@gmail.com</Typography>
         </ListItem>
+
         <ListItem>
           <ListItemIcon sx={{ color: "#D2B48C" }}>
             <CallIcon />
@@ -76,13 +76,13 @@ export const Navbar = () => {
     );
   };
 
-  const renderList = () => {
+  const renderList = (): ReactNode => {
     return (
       <List>
         {menuItems.map((item, index) => (
           <ListItem disablePadding key={index}>
             <ListItemButton
-            onClick={()=>navigate(item.listPath)}
+              onClick={() => navigate(item.listPath)}
               sx={{
                 cursor: "pointer",
                 "&:hover": {
@@ -103,7 +103,7 @@ export const Navbar = () => {
     );
   };
 
-  const sideList = () => (
+  const sideList = (): ReactElement => (
     <StyledBox component="div">
       <StyledAvatar src={avatar} alt="adrian" />
       {renderInfo()}
