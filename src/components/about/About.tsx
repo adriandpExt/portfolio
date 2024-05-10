@@ -90,7 +90,15 @@ export const About = () => {
 
       <Grid item xs={12} sm={3}>
         <Box>
-          <img src={me} alt="me" height="50%" width="70%" />
+          <motion.img
+            src={me}
+            alt="me"
+            height="50%"
+            width="70%"
+            style={{ filter: "grayscale(100%)" }}
+            whileHover={{ filter: "grayscale(0%)", scale: 1.5 }}
+            transition={{ duration: 0.5 }}
+          />
         </Box>
       </Grid>
 
