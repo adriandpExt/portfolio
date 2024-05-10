@@ -1,9 +1,13 @@
-import { ReactNode } from "react";
-import { Button, Grid } from "@mui/material";
+import { ReactElement, ReactNode } from "react";
+import { motion } from "framer-motion";
+
+import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 
 import me from "../../assets/image/me_id.png";
+
 import { SvgIcons } from "../svg-icons";
 import { IconName } from "../svg-icons/utils";
 
@@ -13,14 +17,16 @@ const iconName: IconName[] = [
   "ic_react",
   "ic_vue",
   "ic_javascript",
+  "ic_typescript",
   "ic_html",
   "ic_css",
   "ic_bootstrap",
+  "ic_tailwind",
   "ic_material_ui",
-  "ic_typescript",
 ];
+
 export const About = () => {
-  const handleDownload = () => {
+  const handleDownload = (): ReactElement => {
     return (
       <a href={cvDownload} download={"adrian_del_prado_cv.pdf"} target="_blank">
         <Button
@@ -47,7 +53,9 @@ export const About = () => {
                 alignItems: "center",
               }}
             >
-              <SvgIcons name={item} width={80} height={80} />
+              <motion.div whileHover={{ scale: 2 }}>
+                <SvgIcons name={item} width={80} height={80} />
+              </motion.div>
             </Box>
           </Grid>
         ))}
