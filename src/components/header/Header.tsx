@@ -38,9 +38,10 @@ export const Header = () => {
         sx={{
           color: "#FF6347",
           textAlign: "center",
-          fontWeight: 500,
+          fontWeight: 600,
         }}
         variant="h2"
+        fontFamily="monospace"
       >
         <ReactTyped strings={["Adrian Del Prado"]} typeSpeed={40} />
       </Typography>
@@ -48,7 +49,9 @@ export const Header = () => {
       <Typography
         sx={{
           textAlign: "center",
-          backgroundColor: "#000",
+          backgroundColor: "rgba(128, 128, 128, 0.5)",
+          padding: 0.3,
+          borderRadius: 1,
         }}
         variant="h5"
       >
@@ -57,16 +60,17 @@ export const Header = () => {
           style={{
             margin: "0 0.5rem",
             fontWeight: 600,
-            background:
-              "-webkit-linear-gradient(45deg, #C0C0C0, #808080, #0D47A1, #2196F3, #800080, #FF6347)",
+            background: "#FF6347",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
+            fontFamily: "monospace",
+            fontSize: "2rem",
           }}
         >
           <ReactTyped
             strings={["FRONTEND DEVELOPER", " SOFTWARE DEVELOPER"]}
-            typeSpeed={30}
-            backSpeed={30}
+            typeSpeed={65}
+            backSpeed={65}
             loop
           />
         </span>
