@@ -1,17 +1,11 @@
 import { useState } from "react";
 
-import { styled } from "@mui/material/styles";
-import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 
-import ProjectCard from "./ProjectCard";
-import { projects } from "./utils";
 import ViewModal from "./ViewModal";
+import ProjectCard from "./ProjectCard";
 
-const StyledMainContainer = styled(Box)({
-  background: "#233",
-  height: "100%",
-});
+import { projects } from "./utils";
 
 interface Project {
   image: string[];
@@ -30,10 +24,10 @@ export const Portfolio = () => {
     setViewProject(false);
   };
   return (
-    <StyledMainContainer>
-      <Grid container>
+    <>
+      <Grid container gap={1}>
         {projects.map((project, i) => (
-          <Grid item xs={12} sm={8} md={4} key={i}>
+          <Grid item xs={12} sm={8} md={4} lg={3} xl={2} key={i}>
             <ProjectCard project={project} onView={handleView} />
           </Grid>
         ))}
@@ -44,7 +38,7 @@ export const Portfolio = () => {
         project={projectCard}
         onClose={handleClose}
       />
-    </StyledMainContainer>
+    </>
   );
 };
 

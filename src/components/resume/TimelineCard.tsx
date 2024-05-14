@@ -3,12 +3,17 @@ import Typography from "@mui/material/Typography";
 
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
+
+import { Icon } from "@iconify/react";
+import Box from "@mui/material/Box";
+
 interface Timeline {
   jobtitle: string;
   year: string;
   description: string;
   companyName: string;
 }
+
 interface TimelineCardProps {
   details: Timeline;
 }
@@ -20,38 +25,68 @@ const StyledBox = styled(Container)({
 
 export const TimelineCard = (props: TimelineCardProps) => {
   const { details } = props;
+
+  const renderBar = () => {
+    return (
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          gap: 1,
+          borderBottom: "1px solid #ccc",
+          backgroundColor: "#ccc",
+          padding: 1,
+        }}
+      >
+        <Icon icon="emojione:red-circle" width={10} />
+        <Icon icon="twemoji:yellow-circle" width={10} />
+        <Icon icon="twemoji:green-circle" width={10} />
+      </Box>
+    );
+  };
+
+  const renderContent = () => {
+    return (
+      <Box sx={{ padding: 2 }}>
+        <Grid container spacing={1}>
+          <Grid item xs={12}>
+            <Typography
+              variant="h5"
+              gutterBottom
+              color="whitesmoke"
+              sx={{ fontWeight: 600 }}
+            >
+              {details.year}
+            </Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography variant="h6" gutterBottom color="whitesmoke">
+              {details.jobtitle}
+            </Typography>
+            <Typography variant="caption" gutterBottom color="whitesmoke">
+              {details.companyName}
+            </Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography
+              variant="caption"
+              gutterBottom
+              sx={{ whiteSpace: "wrap" }}
+              color="whitesmoke"
+            >
+              {details.description}
+            </Typography>
+          </Grid>
+        </Grid>
+      </Box>
+    );
+  };
   return (
     <StyledBox maxWidth="sm">
-      <Grid container spacing={1}>
-        <Grid item xs={12}>
-          <Typography
-            variant="h5"
-            gutterBottom
-            color="whitesmoke"
-            sx={{ fontWeight: 600 }}
-          >
-            {details.year}
-          </Typography>
-        </Grid>
-        <Grid item xs={12}>
-          <Typography variant="h6" gutterBottom color="whitesmoke">
-            {details.jobtitle}
-          </Typography>
-          <Typography variant="caption" gutterBottom color="whitesmoke">
-            {details.companyName}
-          </Typography>
-        </Grid>
-        <Grid item xs={12}>
-          <Typography
-            variant="caption"
-            gutterBottom
-            sx={{ whiteSpace: "wrap" }}
-            color="whitesmoke"
-          >
-            {details.description}
-          </Typography>
-        </Grid>
-      </Grid>
+      <>
+        {renderBar()}
+        {renderContent()}
+      </>
     </StyledBox>
   );
 };
