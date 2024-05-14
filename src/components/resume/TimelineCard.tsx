@@ -1,11 +1,10 @@
+import { Icon } from "@iconify/react";
+
 import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
-
+import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
-
-import { Icon } from "@iconify/react";
-import Box from "@mui/material/Box";
 
 interface Timeline {
   jobtitle: string;

@@ -25,9 +25,9 @@ export const Portfolio = () => {
   };
   return (
     <>
-      <Grid container gap={1}>
+      <Grid container gap={1} paddingLeft={2}>
         {projects.map((project, i) => (
-          <Grid item xs={12} sm={8} md={4} lg={3} xl={2} key={i}>
+          <Grid item xs={12} sm={8} md={4} lg={3} key={i}>
             <ProjectCard project={project} onView={handleView} />
           </Grid>
         ))}
