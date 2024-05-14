@@ -5,6 +5,10 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
+
+import { Fade } from "react-awesome-reveal";
 
 interface Timeline {
   jobtitle: string;
@@ -80,12 +84,21 @@ export const TimelineCard = (props: TimelineCardProps) => {
       </Box>
     );
   };
+
+  const controls = useAnimation();
+
+  useEffect(() => {
+    controls.start({ opacity: 1 });
+  }, [controls]);
+
   return (
     <StyledBox maxWidth="sm">
-      <>
-        {renderBar()}
-        {renderContent()}
-      </>
+      <Fade>
+        <motion.div initial={{ opacity: 0 }} animate={controls}>
+          {renderBar()}
+          {renderContent()}
+        </motion.div>
+      </Fade>
     </StyledBox>
   );
 };
