@@ -12,8 +12,9 @@ import { SvgIcons } from "../svg-icons";
 import { IconName } from "../svg-icons/utils";
 
 import cvDownload from "../../../public/cv/AdrianDelPrado_CV.pdf";
+import Wrapper from "./Wrapper";
 
-const iconName: IconName[] = [
+const techStack: IconName[] = [
   "ic_react",
   "ic_vue",
   "ic_javascript",
@@ -24,6 +25,7 @@ const iconName: IconName[] = [
   "ic_tailwind",
   "ic_material_ui",
 ];
+const techTools: IconName[] = ["ic_git", "ic_mysql", "ic_vscode"];
 
 export const About = () => {
   const handleDownload = (): ReactElement => {
@@ -42,21 +44,25 @@ export const About = () => {
   const renderStack = (): ReactNode => {
     return (
       <Grid container spacing={1}>
-        {iconName.map((item, id) => (
+        {techStack.map((item, id) => (
           <Grid item xs={6} sm={4} md={3} lg={2} key={id}>
-            <Box
-              sx={{
-                padding: "0.5rem",
-                border: "2px solid #FF6347",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <motion.div whileHover={{ scale: 2 }}>
-                <SvgIcons name={item} width={80} height={80} />
-              </motion.div>
-            </Box>
+            <Wrapper>
+              <SvgIcons name={item} width={50} height={50} />
+            </Wrapper>
+          </Grid>
+        ))}
+      </Grid>
+    );
+  };
+
+  const renderTools = (): ReactNode => {
+    return (
+      <Grid container spacing={1}>
+        {techTools.map((item, id) => (
+          <Grid item xs={6} sm={4} md={3} lg={2} key={id}>
+            <Wrapper>
+              <SvgIcons name={item} width={50} height={50} />
+            </Wrapper>
           </Grid>
         ))}
       </Grid>
@@ -107,6 +113,12 @@ export const About = () => {
           Tech Stack
         </Typography>
         {renderStack()}
+      </Grid>
+      <Grid item xs={12}>
+        <Typography color="#FFF" variant="h5" sx={{ fontFamily: "cursive" }}>
+          Tech Tools
+        </Typography>
+        {renderTools()}
       </Grid>
     </Grid>
   );

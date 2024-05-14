@@ -12,4 +12,7 @@ export type IconName =
   | "ic_bootstrap"
   | "ic_material_ui"
   | "ic_tailwind"
-  | "ic_typescript";
+  | "ic_typescript"
+  | "ic_mysql"
+  | "ic_vscode"
+  | "ic_git";
