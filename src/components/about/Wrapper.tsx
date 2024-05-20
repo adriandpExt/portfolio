@@ -1,9 +1,11 @@
-import { Box } from "@mui/material";
+import { ReactElement, ReactNode } from "react";
+
 import { motion } from "framer-motion";
-import { ReactElement } from "react";
+
+import Box from "@mui/material/Box";
 
 interface WrapperProps {
-  children: ReactElement;
+  children: ReactElement | ReactNode;
 }
 
 export const Wrapper = (props: WrapperProps) => {

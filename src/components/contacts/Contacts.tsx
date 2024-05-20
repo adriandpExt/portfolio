@@ -84,6 +84,22 @@ export const Contacts = () => {
     dispatch(facebookinUrl(facebook));
   };
 
+  const renderBottomNavigation = () => {
+    return (
+      <StyledBottomNavigation>
+        <StyledBottomNavigationAction
+          icon={<FacebookIcon />}
+          onClick={handleOpenFacebook}
+        />
+        <StyledBottomNavigationAction
+          icon={<LinkedInIcon />}
+          onClick={handleOpenLinkedin}
+        />
+        <StyledBottomNavigationAction icon={<EmailIcon />} />
+        <StyledBottomNavigationAction icon={<CallIcon />} />
+      </StyledBottomNavigation>
+    );
+  };
   const validationSchema = yup.object<ContactForm>({
     fullname: yup.string().required("Fullname is required"),
     email: yup.string().required("Email is required"),
@@ -98,9 +114,10 @@ export const Contacts = () => {
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      console.log("submit", dispatch(contacSubmit(values)));
+      console.log("values", dispatch(contacSubmit(values)));
     },
   });
+
   return (
     <StyledContactContainer>
       <Grid container>
@@ -113,7 +130,7 @@ export const Contacts = () => {
             pt: "50px",
           }}
         >
-          <form onSubmit={form.handleSubmit}>
+          <form onSubmit={form.handleSubmit} data-testid="contact-form">
             <Typography
               variant="h5"
               sx={{
@@ -126,10 +143,11 @@ export const Contacts = () => {
               Hire or Contact me...
             </Typography>
             <InputField
-              fullWidth={true}
+              data-testid="fullname"
               label="Fullname"
               name="fullname"
               variant="outlined"
+              fullWidth={true}
               value={form.values.fullname}
               onChange={form.handleChange}
               error={form.touched.fullname && Boolean(form.errors.fullname)}
@@ -137,6 +155,7 @@ export const Contacts = () => {
             />
             <InputField
               fullWidth={true}
+              data-testid="email"
               label="Email"
               name="email"
               variant="outlined"
@@ -148,6 +167,7 @@ export const Contacts = () => {
             />
             <InputField
               fullWidth={true}
+              data-testid="message"
               label="Message"
               name="message"
               variant="outlined"
@@ -171,18 +191,7 @@ export const Contacts = () => {
         </Box>
 
         <Grid item xs={12}>
-          <StyledBottomNavigation>
-            <StyledBottomNavigationAction
-              icon={<FacebookIcon />}
-              onClick={handleOpenFacebook}
-            />
-            <StyledBottomNavigationAction
-              icon={<LinkedInIcon />}
-              onClick={handleOpenLinkedin}
-            />
-            <StyledBottomNavigationAction icon={<EmailIcon />} />
-            <StyledBottomNavigationAction icon={<CallIcon />} />
-          </StyledBottomNavigation>
+          {renderBottomNavigation()}
         </Grid>
       </Grid>
     </StyledContactContainer>

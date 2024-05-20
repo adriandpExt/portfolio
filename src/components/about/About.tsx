@@ -9,35 +9,45 @@ import Typography from "@mui/material/Typography";
 import me from "../../assets/image/me_id.png";
 
 import { SvgIcons } from "../svg-icons";
-import { IconName } from "../svg-icons/utils";
 
-import cvDownload from "../../../public/cv/AdrianDelPrado_CV.pdf";
 import Wrapper from "./Wrapper";
 
-const techStack: IconName[] = [
-  "ic_react",
-  "ic_vue",
-  "ic_javascript",
-  "ic_typescript",
-  "ic_html",
-  "ic_css",
-  "ic_bootstrap",
-  "ic_tailwind",
-  "ic_material_ui",
-];
-const techTools: IconName[] = ["ic_git", "ic_mysql", "ic_vscode"];
+import { techStack, techTools } from "./utils";
+import { Stack } from "@mui/material";
 
 export const About = () => {
   const handleDownload = (): ReactElement => {
     return (
-      <a href={cvDownload} download={"adrian_del_prado_cv.pdf"} target="_blank">
-        <Button
-          variant="outlined"
-          sx={{ color: "#FF6347", border: "1px solid #FF6347" }}
-        >
-          CV DOWNLOAD
-        </Button>
-      </a>
+      <Button
+        href="../../../public/cv/AdrianDelPrado_CV.pdf"
+        download="adrian_del_prado_cv.pdf"
+        target="_blank"
+        variant="outlined"
+        sx={{ color: "#FF6347", border: "1px solid #FF6347" }}
+      >
+        CV DOWNLOAD
+      </Button>
+    );
+  };
+
+  const renderImage = () => {
+    return (
+      <Box>
+        <motion.img
+          src={me}
+          alt="me"
+          height="50%"
+          width="70%"
+          style={{
+            filter: "grayscale(100%) drop-shadow(15px 10px 4px crimson)",
+          }}
+          whileHover={{
+            filter: "grayscale(0%) drop-shadow(15px 10px 4px tomato)",
+            scale: 1.5,
+          }}
+          transition={{ duration: 0.5 }}
+        />
+      </Box>
     );
   };
 
@@ -47,7 +57,12 @@ export const About = () => {
         {techStack.map((item, id) => (
           <Grid item xs={6} sm={4} md={3} lg={2} key={id}>
             <Wrapper>
-              <SvgIcons name={item} width={50} height={50} />
+              <SvgIcons
+                name={item}
+                width={50}
+                height={50}
+                data-testid="tech-stack-icon"
+              />
             </Wrapper>
           </Grid>
         ))}
@@ -61,7 +76,12 @@ export const About = () => {
         {techTools.map((item, id) => (
           <Grid item xs={6} sm={4} md={3} lg={2} key={id}>
             <Wrapper>
-              <SvgIcons name={item} width={50} height={50} />
+              <SvgIcons
+                name={item}
+                width={50}
+                height={50}
+                data-testid="tech-tools-icon"
+              />
             </Wrapper>
           </Grid>
         ))}
@@ -69,9 +89,57 @@ export const About = () => {
     );
   };
 
+  const renderAboutIntro = () => {
+    return (
+      <Stack gap={3}>
+        <Typography color="#FFF" variant="h6" sx={{ fontFamily: "cursive" }}>
+          Hello! I'm{" "}
+          <span
+            style={{ color: "tomato", fontSize: "2rem", fontStyle: "italic" }}
+          >
+            Adrian Del Prado
+          </span>
+          , and I like learning things and building them.
+        </Typography>
+
+        <Typography color="#FFF" variant="h6" sx={{ fontFamily: "cursive" }}>
+          The reason why I chose web development was that there was a lot to
+          learn and a lot of things to build.
+        </Typography>
+
+        <Typography color="#FFF" variant="h6" sx={{ fontFamily: "cursive" }}>
+          I am fluent in classics like{" "}
+          <span
+            style={{ color: "tomato", fontSize: "2rem", fontStyle: "italic" }}
+          >
+            {" "}
+            React JS, Typescript{" "}
+          </span>{" "}
+          And{" "}
+          <span
+            style={{ color: "tomato", fontSize: "2rem", fontStyle: "italic" }}
+          >
+            {" "}
+            React Frameworks
+          </span>
+        </Typography>
+
+        <Typography color="#FFF" variant="h6" sx={{ fontFamily: "cursive" }}>
+          My field of Interest's are building new{" "}
+          <span
+            style={{ color: "tomato", fontSize: "2rem", fontStyle: "italic" }}
+          >
+            Web Technologies and Products
+          </span>
+        </Typography>
+      </Stack>
+    );
+  };
+
   return (
     <Grid
       container
+      rowGap={5}
       sx={{
         justifyContent: "center",
         alignItems: "center",
@@ -84,28 +152,11 @@ export const About = () => {
     >
       <Grid item xs={12} sm={9}>
         {handleDownload()}
-
-        <Typography color="#FFF" variant="h6" sx={{ fontFamily: "cursive" }}>
-          Hello! I'm Adrian, and I like learning things and building them. The
-          reason why I chose web development was that there was a lot to learn
-          and a lot of things to build. I started web development in 2022, where
-          I had to learn JavaScript from scratch, and wow, how I fell in love
-          with it.
-        </Typography>
+        {renderAboutIntro()}
       </Grid>
 
       <Grid item xs={12} sm={3}>
-        <Box>
-          <motion.img
-            src={me}
-            alt="me"
-            height="50%"
-            width="70%"
-            style={{ filter: "grayscale(100%)" }}
-            whileHover={{ filter: "grayscale(0%)", scale: 1.5 }}
-            transition={{ duration: 0.5 }}
-          />
-        </Box>
+        {renderImage()}
       </Grid>
 
       <Grid item xs={12}>
@@ -114,6 +165,7 @@ export const About = () => {
         </Typography>
         {renderStack()}
       </Grid>
+
       <Grid item xs={12}>
         <Typography color="#FFF" variant="h5" sx={{ fontFamily: "cursive" }}>
           Tech Tools

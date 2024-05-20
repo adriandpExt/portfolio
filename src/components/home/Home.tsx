@@ -1,12 +1,12 @@
 import React from "react";
 import { Header } from "../header";
-import { Particles } from "../particles";
+import Particle from "../particles/Particle";
 
 export const Home = () => {
   return (
     <React.Fragment>
       <Header />
-      <Particles />
+      <Particle />
     </React.Fragment>
   );
 };

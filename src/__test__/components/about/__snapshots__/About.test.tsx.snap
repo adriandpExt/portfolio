@@ -1,0 +1,397 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About Component Tests Render Test 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container css-dh6qnx-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-173qa7i-MuiGrid-root"
+    >
+      <a
+        class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary css-15avm3p-MuiButtonBase-root-MuiButton-root"
+        download="adrian_del_prado_cv.pdf"
+        href="../../../public/cv/AdrianDelPrado_CV.pdf"
+        tabindex="0"
+        target="_blank"
+      >
+        CV DOWNLOAD
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </a>
+      <div
+        class="MuiStack-root css-msk5bl-MuiStack-root"
+      >
+        <h6
+          class="MuiTypography-root MuiTypography-h6 css-mivlh5-MuiTypography-root"
+        >
+          Hello! I'm
+           
+          <span
+            style="color: tomato; font-size: 2rem; font-style: italic;"
+          >
+            Adrian Del Prado
+          </span>
+          , and I like learning things and building them.
+        </h6>
+        <h6
+          class="MuiTypography-root MuiTypography-h6 css-mivlh5-MuiTypography-root"
+        >
+          The reason why I chose web development was that there was a lot to learn and a lot of things to build.
+        </h6>
+        <h6
+          class="MuiTypography-root MuiTypography-h6 css-mivlh5-MuiTypography-root"
+        >
+          I am fluent in classics like
+           
+          <span
+            style="color: tomato; font-size: 2rem; font-style: italic;"
+          >
+             
+            React JS, Typescript
+             
+          </span>
+           
+          And
+           
+          <span
+            style="color: tomato; font-size: 2rem; font-style: italic;"
+          >
+             
+            React Frameworks
+          </span>
+        </h6>
+        <h6
+          class="MuiTypography-root MuiTypography-h6 css-mivlh5-MuiTypography-root"
+        >
+          My field of Interest's are building new
+           
+          <span
+            style="color: tomato; font-size: 2rem; font-style: italic;"
+          >
+            Web Technologies and Products
+          </span>
+        </h6>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+    >
+      <div
+        class="MuiBox-root css-0"
+      >
+        <img
+          alt="me"
+          height="50%"
+          src="[object Object]"
+          style="filter: grayscale(100%) drop-shadow(15px 10px 4px crimson);"
+          width="70%"
+        />
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    >
+      <h5
+        class="MuiTypography-root MuiTypography-h5 css-k4zp2n-MuiTypography-root"
+      >
+        Tech Stack
+      </h5>
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 MuiGrid-grid-lg-2 css-1pgzwh3-MuiGrid-root"
+        >
+          <div
+            class="MuiBox-root css-f72d4r"
+          >
+            <div>
+              <div>
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gwklqv-MuiSvgIcon-root"
+                  data-testid="tech-stack-icon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <use
+                    href="#icon-ic_react"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 MuiGrid-grid-lg-2 css-1pgzwh3-MuiGrid-root"
+        >
+          <div
+            class="MuiBox-root css-f72d4r"
+          >
+            <div>
+              <div>
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gwklqv-MuiSvgIcon-root"
+                  data-testid="tech-stack-icon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <use
+                    href="#icon-ic_vue"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 MuiGrid-grid-lg-2 css-1pgzwh3-MuiGrid-root"
+        >
+          <div
+            class="MuiBox-root css-f72d4r"
+          >
+            <div>
+              <div>
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gwklqv-MuiSvgIcon-root"
+                  data-testid="tech-stack-icon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <use
+                    href="#icon-ic_javascript"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 MuiGrid-grid-lg-2 css-1pgzwh3-MuiGrid-root"
+        >
+          <div
+            class="MuiBox-root css-f72d4r"
+          >
+            <div>
+              <div>
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gwklqv-MuiSvgIcon-root"
+                  data-testid="tech-stack-icon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <use
+                    href="#icon-ic_typescript"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 MuiGrid-grid-lg-2 css-1pgzwh3-MuiGrid-root"
+        >
+          <div
+            class="MuiBox-root css-f72d4r"
+          >
+            <div>
+              <div>
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gwklqv-MuiSvgIcon-root"
+                  data-testid="tech-stack-icon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <use
+                    href="#icon-ic_html"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 MuiGrid-grid-lg-2 css-1pgzwh3-MuiGrid-root"
+        >
+          <div
+            class="MuiBox-root css-f72d4r"
+          >
+            <div>
+              <div>
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gwklqv-MuiSvgIcon-root"
+                  data-testid="tech-stack-icon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <use
+                    href="#icon-ic_css"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 MuiGrid-grid-lg-2 css-1pgzwh3-MuiGrid-root"
+        >
+          <div
+            class="MuiBox-root css-f72d4r"
+          >
+            <div>
+              <div>
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gwklqv-MuiSvgIcon-root"
+                  data-testid="tech-stack-icon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <use
+                    href="#icon-ic_bootstrap"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 MuiGrid-grid-lg-2 css-1pgzwh3-MuiGrid-root"
+        >
+          <div
+            class="MuiBox-root css-f72d4r"
+          >
+            <div>
+              <div>
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gwklqv-MuiSvgIcon-root"
+                  data-testid="tech-stack-icon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <use
+                    href="#icon-ic_tailwind"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 MuiGrid-grid-lg-2 css-1pgzwh3-MuiGrid-root"
+        >
+          <div
+            class="MuiBox-root css-f72d4r"
+          >
+            <div>
+              <div>
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gwklqv-MuiSvgIcon-root"
+                  data-testid="tech-stack-icon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <use
+                    href="#icon-ic_material_ui"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+    >
+      <h5
+        class="MuiTypography-root MuiTypography-h5 css-k4zp2n-MuiTypography-root"
+      >
+        Tech Tools
+      </h5>
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 MuiGrid-grid-lg-2 css-1pgzwh3-MuiGrid-root"
+        >
+          <div
+            class="MuiBox-root css-f72d4r"
+          >
+            <div>
+              <div>
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gwklqv-MuiSvgIcon-root"
+                  data-testid="tech-tools-icon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <use
+                    href="#icon-ic_git"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 MuiGrid-grid-lg-2 css-1pgzwh3-MuiGrid-root"
+        >
+          <div
+            class="MuiBox-root css-f72d4r"
+          >
+            <div>
+              <div>
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gwklqv-MuiSvgIcon-root"
+                  data-testid="tech-tools-icon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <use
+                    href="#icon-ic_mysql"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 MuiGrid-grid-lg-2 css-1pgzwh3-MuiGrid-root"
+        >
+          <div
+            class="MuiBox-root css-f72d4r"
+          >
+            <div>
+              <div>
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gwklqv-MuiSvgIcon-root"
+                  data-testid="tech-tools-icon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <use
+                    href="#icon-ic_vscode"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
