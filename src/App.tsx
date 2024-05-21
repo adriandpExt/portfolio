@@ -1,12 +1,28 @@
-import { Navbar } from "./components";
+import { useEffect, useState } from "react";
+import { Loader, Navbar } from "./components";
 
 import { AppRoutes } from "./routes/config";
 
 const App = () => {
+  const [loading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timeout);
+  }, []);
   return (
     <>
-      <Navbar />
-      {AppRoutes}
+      {loading ? (
+        <Loader />
+      ) : (
+        <>
+          <Navbar />
+          {AppRoutes}
+        </>
+      )}
     </>
   );
 };

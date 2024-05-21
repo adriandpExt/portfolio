@@ -8,7 +8,10 @@ import {
   CardActions,
   Button,
   Divider,
+  Box,
 } from "@mui/material";
+
+import { Icon } from "@iconify/react";
 
 interface Project {
   image: string[];
@@ -24,6 +27,25 @@ const StyledCardContainer = styled(Card)({
   margin: "3rem auto",
 });
 
+const renderBar = () => {
+  return (
+    <Box
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        gap: 1,
+        borderBottom: "1px solid #ccc",
+        backgroundColor: "#ccc",
+        padding: 1,
+      }}
+    >
+      <Icon icon="emojione:red-circle" width={10} />
+      <Icon icon="twemoji:yellow-circle" width={10} />
+      <Icon icon="twemoji:green-circle" width={10} />
+    </Box>
+  );
+};
+
 export const ProjectCard = (props: ProjectCardProps) => {
   const { project, onView } = props;
 
@@ -33,6 +55,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
 
   return (
     <StyledCardContainer onClick={handleView}>
+      {renderBar()}
       <CardActionArea>
         <CardContent>
           <Typography variant="h6" fontWeight={600} gutterBottom>

@@ -135,7 +135,7 @@ export const Navbar = () => {
           </Toolbar>
         </StyledAppBar>
       </Box>
-      <Drawer open={open} anchor="right" onClose={() => setOpen(false)}>
+      <Drawer open={open} anchor="left" onClose={() => setOpen(false)}>
         {sideList()}
         <Footer />
       </Drawer>

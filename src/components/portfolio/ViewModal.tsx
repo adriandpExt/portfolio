@@ -59,6 +59,10 @@ export const ViewModal = (props: ViewModalProps) => {
     ));
   };
 
+  const renderDescription = (description: string) => {
+    return <Typography variant="caption"> {description}</Typography>;
+  };
+
   return (
     <Dialog
       open={open}
@@ -72,13 +76,14 @@ export const ViewModal = (props: ViewModalProps) => {
       </DialogTitle>
       <DialogContent>
         {renderBar()}
+
+        {renderDescription(project?.description as string)}
+
         <AwesomeSlider className="w-screen" organicArrows={true}>
           {renderSlider(project?.image as string[])}
         </AwesomeSlider>
       </DialogContent>
-      <DialogContent>
-        <Typography variant="caption"> {project?.description}</Typography>
-      </DialogContent>
+
       <DialogActions>
         <Button variant="contained" onClick={onClose}>
           CLOSE
