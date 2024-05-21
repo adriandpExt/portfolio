@@ -10,7 +10,7 @@ import introBg from "../../assets/image/intro_bg.png";
 const StyledBox = styled(Box)(({ theme }) => ({
   position: "absolute",
   width: "100%",
-  height: "90vh",
+  height: "100%",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
