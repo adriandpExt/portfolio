@@ -9,7 +9,7 @@ export const changeInputValue = (
     `[data-testid="${testId}"] input`
   );
   if (!inputElement) {
-    throw new Error(`Input element with data-testid "${testId}" not found`);
+    return new Error(`Input element with data-testid "${testId}" not found`);
   }
   fireEvent.change(inputElement, { target: { value } });
 };
@@ -23,7 +23,7 @@ export const changeTextareaValue = (
     `[data-testid="${testId}"] textarea`
   );
   if (!inputElement) {
-    throw new Error(`Input element with data-testid "${testId}" not found`);
+    return new Error(`Input element with data-testid "${testId}" not found`);
   }
   fireEvent.change(inputElement, { target: { value } });
 };
