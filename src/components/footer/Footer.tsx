@@ -51,14 +51,17 @@ export const Footer = () => {
   return (
     <StyledBottomNavigation>
       <StyledBottomNavigationAction
+        data-testid="facebook"
         icon={<FacebookIcon />}
         onClick={handleOpenFacebook}
       />
       <StyledBottomNavigationAction
+        data-testid="linkedin"
         icon={<LinkedInIcon />}
         onClick={handleOpenLinkedin}
       />
       <StyledBottomNavigationAction
+        data-testid="contact"
         icon={<EmailIcon />}
         onClick={handleOpenContact}
       />

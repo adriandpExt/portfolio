@@ -75,7 +75,7 @@ export const Contacts = () => {
   const handleOpenLinkedin = () => {
     const linkedin = "https://www.linkedin.com/in/adrian-del-prado-285aa81b8";
     window.open(linkedin, "_blank");
-    dispatch(linkedinUrl(linkedinUrl));
+    dispatch(linkedinUrl(linkedin));
   };
 
   const handleOpenFacebook = () => {
@@ -88,10 +88,12 @@ export const Contacts = () => {
     return (
       <StyledBottomNavigation>
         <StyledBottomNavigationAction
+          data-testid="facebook"
           icon={<FacebookIcon />}
           onClick={handleOpenFacebook}
         />
         <StyledBottomNavigationAction
+          data-testid="linkedin"
           icon={<LinkedInIcon />}
           onClick={handleOpenLinkedin}
         />

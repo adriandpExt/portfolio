@@ -3,24 +3,26 @@ import { fireEvent, render, waitFor } from "@testing-library/react";
 
 import { Contacts } from "../../../components";
 import { changeInputValue, changeTextareaValue } from "./utils.ts";
+import { Provider } from "react-redux";
+import store from "../../../redux/store.ts";
 
-jest.mock("react-redux", () => ({
-  useDispatch: jest.fn(),
-}));
+const screenContact = (
+  <Provider store={store}>
+    <Contacts />
+  </Provider>
+);
+
+window.open = jest.fn();
 
 describe("Contact Component Tests", () => {
-  afterEach(() => {
-    jest.clearAllMocks();
-  });
-
   test("Render Test", () => {
-    const { container } = render(<Contacts />);
+    const { container } = render(screenContact);
 
     expect(container).toMatchSnapshot();
   });
 
   test("renders the contact form correctly", () => {
-    const { getByTestId, getByLabelText, getByText } = render(<Contacts />);
+    const { getByTestId, getByLabelText, getByText } = render(screenContact);
 
     expect(getByText("Contact Me")).toBeInTheDocument();
 
@@ -34,7 +36,7 @@ describe("Contact Component Tests", () => {
   });
 
   test("submit form with valid data", async () => {
-    const { getByTestId, getByText, container } = render(<Contacts />);
+    const { getByTestId, getByText, container } = render(screenContact);
 
     changeInputValue(container, "fullname", "John Doe");
     changeInputValue(container, "email", "john@example.com");
@@ -45,5 +47,27 @@ describe("Contact Component Tests", () => {
     await waitFor(() => {
       expect(getByText("Contact Me")).toBeInTheDocument();
     });
+  });
+
+  test("linkedin open in new window", () => {
+    const { getByTestId } = render(screenContact);
+
+    fireEvent.click(getByTestId("linkedin"));
+
+    expect(window.open).toHaveBeenCalledWith(
+      "https://www.linkedin.com/in/adrian-del-prado-285aa81b8",
+      "_blank"
+    );
+  });
+
+  test("facebook open in new window", () => {
+    const { getByTestId } = render(screenContact);
+
+    fireEvent.click(getByTestId("facebook"));
+
+    expect(window.open).toHaveBeenCalledWith(
+      "https://www.facebook.com/adrian.delprado.98",
+      "_blank"
+    );
   });
 });

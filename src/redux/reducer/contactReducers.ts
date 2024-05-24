@@ -11,7 +11,7 @@ export const contactReducers = createSlice({
   name: "link",
   initialState,
   reducers: {
-    contacSubmit: (_, action: PayloadAction<ContactForm>) => {
+    contacSubmit: (_state, action: PayloadAction<ContactForm>) => {
       return action.payload;
     },
   },
