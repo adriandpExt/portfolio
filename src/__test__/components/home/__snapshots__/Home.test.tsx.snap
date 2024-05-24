@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`home component test should render home 1`] = `
+<div>
+  <div
+    class="MuiBox-root css-121k6hb"
+  >
+    <h2
+      class="MuiTypography-root MuiTypography-h2 css-o3dvd8-MuiTypography-root"
+      data-testid="fullname"
+    >
+      <span
+        data-testid="react-typed"
+      >
+        <span />
+        <span
+          aria-hidden="true"
+          class="typed-cursor"
+        >
+          |
+        </span>
+      </span>
+    </h2>
+    <h5
+      class="MuiTypography-root MuiTypography-h5 css-kcegrn-MuiTypography-root"
+      data-testid="profession"
+    >
+      I am a
+      <span
+        style="margin: 0px 0.5rem; font-weight: 600; background: rgb(255, 99, 71); font-family: monospace; font-size: 2rem;"
+      >
+        <span
+          data-testid="react-typed"
+        >
+          <span />
+          <span
+            aria-hidden="true"
+            class="typed-cursor"
+          >
+            |
+          </span>
+        </span>
+      </span>
+    </h5>
+  </div>
+</div>
+`;
