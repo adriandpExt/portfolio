@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1716539811211" clover="3.2.0">
-  <project timestamp="1716539811211" name="All files">
-    <metrics statements="292" coveredstatements="239" conditionals="18" coveredconditionals="14" methods="54" coveredmethods="23" elements="364" coveredelements="276" complexity="0" loc="292" ncloc="292" packages="14" files="33" classes="33"/>
+<coverage generated="1716541471086" clover="3.2.0">
+  <project timestamp="1716541471086" name="All files">
+    <metrics statements="292" coveredstatements="240" conditionals="18" coveredconditionals="14" methods="54" coveredmethods="24" elements="364" coveredelements="278" complexity="0" loc="292" ncloc="292" packages="14" files="33" classes="33"/>
     <package name="__test__.components.contacts">
       <metrics statements="11" coveredstatements="9" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="utils.ts" path="C:\Users\ADRIAN DEL PRADO\Documents\projects\react\portfolio\src\__test__\components\contacts\utils.ts">
@@ -135,9 +135,9 @@
       </file>
     </package>
     <package name="components.footer">
-      <metrics statements="27" coveredstatements="26" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
+      <metrics statements="27" coveredstatements="27" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
       <file name="Footer.tsx" path="C:\Users\ADRIAN DEL PRADO\Documents\projects\react\portfolio\src\components\footer\Footer.tsx">
-        <metrics statements="26" coveredstatements="25" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
+        <metrics statements="26" coveredstatements="26" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
         <line num="1" count="3" type="stmt"/>
         <line num="2" count="3" type="stmt"/>
         <line num="4" count="3" type="stmt"/>
@@ -150,19 +150,19 @@
         <line num="15" count="3" type="stmt"/>
         <line num="21" count="3" type="stmt"/>
         <line num="31" count="3" type="stmt"/>
-        <line num="32" count="3" type="stmt"/>
-        <line num="33" count="3" type="stmt"/>
-        <line num="35" count="3" type="stmt"/>
+        <line num="32" count="4" type="stmt"/>
+        <line num="33" count="4" type="stmt"/>
+        <line num="35" count="4" type="stmt"/>
         <line num="36" count="1" type="stmt"/>
         <line num="37" count="1" type="stmt"/>
         <line num="38" count="1" type="stmt"/>
-        <line num="41" count="3" type="stmt"/>
+        <line num="41" count="4" type="stmt"/>
         <line num="42" count="1" type="stmt"/>
         <line num="43" count="1" type="stmt"/>
         <line num="44" count="1" type="stmt"/>
-        <line num="47" count="3" type="stmt"/>
-        <line num="48" count="0" type="stmt"/>
-        <line num="51" count="3" type="stmt"/>
+        <line num="47" count="4" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="51" count="4" type="stmt"/>
         <line num="71" count="3" type="stmt"/>
       </file>
       <file name="index.ts" path="C:\Users\ADRIAN DEL PRADO\Documents\projects\react\portfolio\src\components\footer\index.ts">

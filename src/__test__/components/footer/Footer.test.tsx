@@ -6,7 +6,12 @@ import { Footer } from "../../../components";
 
 import store from "../../../redux/store";
 
-jest.mock("react-router-dom");
+const mockedNavigate = jest.fn();
+
+jest.mock("react-router-dom", () => ({
+  ...jest.requireActual("react-router-dom"),
+  useNavigate: () => mockedNavigate,
+}));
 
 const footerScreen = (
   <Provider store={store}>
@@ -43,5 +48,14 @@ describe("Footer component test", () => {
       "https://www.facebook.com/adrian.delprado.98",
       "_blank"
     );
+  });
+
+  test("navigate to contact page", () => {
+    const { getByTestId } = render(footerScreen);
+
+    const contactIcon = getByTestId("contact");
+    fireEvent.click(contactIcon);
+
+    expect(mockedNavigate).toHaveBeenCalledWith("/portfolio/contact");
   });
 });

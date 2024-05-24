@@ -44,7 +44,7 @@ export const Footer = () => {
     dispatch(facebookinUrl(facebook));
   };
 
-  const handleOpenContact = () => {
+  const handleOpenContact = (): void => {
     navigate("/portfolio/contact");
   };
 
