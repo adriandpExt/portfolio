@@ -19,14 +19,13 @@ export const About = () => {
   const handleDownload = (): ReactElement => {
     return (
       <Button
-        href="@/assets/cv/AdrianDelPrado_CV.pdf"
+        href="https://drive.google.com/file/d/1_a6BkY3raJncq9vpT29d9DK-vPSyzqbe/view?usp=sharing"
         download="adrian_del_prado_cv.pdf"
         target="_blank"
         variant="outlined"
         sx={{ color: "#FF6347", border: "1px solid #FF6347" }}
       >
         CV DOWNLOAD
-        {/* testing dl */}
       </Button>
     );
   };
