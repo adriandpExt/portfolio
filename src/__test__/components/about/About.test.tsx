@@ -24,7 +24,7 @@ describe("About Component Tests", () => {
     fireEvent.click(downloadButton);
     expect(downloadButton).toHaveAttribute(
       "href",
-      "@/assets/cv/AdrianDelPrado_CV.pdf"
+      "https://drive.google.com/file/d/1_a6BkY3raJncq9vpT29d9DK-vPSyzqbe/view?usp=sharing"
     );
     expect(downloadButton).toHaveAttribute(
       "download",

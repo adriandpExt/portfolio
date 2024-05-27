@@ -30,24 +30,20 @@ describe("Footer component test", () => {
 
   test("linkedin open in new window", () => {
     const { getByTestId } = render(footerScreen);
+    const linkedin = "https://www.linkedin.com/in/adrian-del-prado-285aa81b8";
 
     fireEvent.click(getByTestId("linkedin"));
 
-    expect(window.open).toHaveBeenCalledWith(
-      "https://www.linkedin.com/in/adrian-del-prado-285aa81b8",
-      "_blank"
-    );
+    expect(window.open).toHaveBeenCalledWith(linkedin, "_blank");
   });
 
   test("facebook open in new window", () => {
     const { getByTestId } = render(footerScreen);
+    const facebookUrl = "https://www.facebook.com/adrian.delprado.98";
 
     fireEvent.click(getByTestId("facebook"));
 
-    expect(window.open).toHaveBeenCalledWith(
-      "https://www.facebook.com/adrian.delprado.98",
-      "_blank"
-    );
+    expect(window.open).toHaveBeenCalledWith(facebookUrl, "_blank");
   });
 
   test("navigate to contact page", () => {
