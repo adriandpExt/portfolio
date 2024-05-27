@@ -26,6 +26,7 @@ export const About = () => {
         sx={{ color: "#FF6347", border: "1px solid #FF6347" }}
       >
         CV DOWNLOAD
+        {/* testing dl */}
       </Button>
     );
   };
