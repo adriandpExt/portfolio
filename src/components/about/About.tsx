@@ -19,7 +19,7 @@ export const About = () => {
   const handleDownload = (): ReactElement => {
     return (
       <Button
-        href="../../../public/cv/AdrianDelPrado_CV.pdf"
+        href="public/cv/AdrianDelPrado_CV.pdf"
         download="adrian_del_prado_cv.pdf"
         target="_blank"
         variant="outlined"

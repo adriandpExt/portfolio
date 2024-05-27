@@ -11,7 +11,7 @@ exports[`About Component Tests Render Test 1`] = `
       <a
         class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary css-15avm3p-MuiButtonBase-root-MuiButton-root"
         download="adrian_del_prado_cv.pdf"
-        href="../../../public/cv/AdrianDelPrado_CV.pdf"
+        href="public/cv/AdrianDelPrado_CV.pdf"
         tabindex="0"
         target="_blank"
       >
