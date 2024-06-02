@@ -24,7 +24,7 @@ describe("About Component Tests", () => {
     fireEvent.click(downloadButton);
     expect(downloadButton).toHaveAttribute(
       "href",
-      "https://drive.google.com/file/d/1_a6BkY3raJncq9vpT29d9DK-vPSyzqbe/view?usp=sharing"
+      "https://drive.google.com/file/d/1G9ErsdGqrhD-O8qNlTmJeugy16kMLibk/view?usp=drive_link"
     );
     expect(downloadButton).toHaveAttribute(
       "download",

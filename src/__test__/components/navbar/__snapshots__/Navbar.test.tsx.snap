@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`navbar component test Navbar renders menu items correctly 1`] = `
+<div>
+  <nav
+    class="MuiBox-root css-0"
+  >
+    <header
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionStatic css-1d1jaor-MuiPaper-root-MuiAppBar-root"
+    >
+      <div
+        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-hyum1k-MuiToolbar-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge css-tp2qox-MuiSvgIcon-root"
+            data-testid="AppsIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M4 8h4V4H4zm6 12h4v-4h-4zm-6 0h4v-4H4zm0-6h4v-4H4zm6 0h4v-4h-4zm6-10v4h4V4zm-6 4h4V4h-4zm6 6h4v-4h-4zm0 6h4v-4h-4z"
+            />
+          </svg>
+          <h5
+            class="MuiTypography-root MuiTypography-h5 css-5eczce-MuiTypography-root"
+            data-testid="nameLogo"
+          >
+            ADRIAN
+          </h5>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </header>
+  </nav>
+</div>
+`;

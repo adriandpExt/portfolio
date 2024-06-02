@@ -63,14 +63,18 @@ export const Navbar = () => {
           <ListItemIcon sx={{ color: "#D2B48C" }}>
             <EmailIcon />
           </ListItemIcon>
-          <Typography fontFamily="cursive">adriandp52@gmail.com</Typography>
+          <Typography data-testid="email" fontFamily="cursive">
+            adriandp52@gmail.com
+          </Typography>
         </ListItem>
 
         <ListItem>
           <ListItemIcon sx={{ color: "#D2B48C" }}>
             <CallIcon />
           </ListItemIcon>
-          <Typography fontFamily="cursive">+63 926 391 2007</Typography>
+          <Typography data-testid="phoneNumber" fontFamily="cursive">
+            +63 926 391 2007
+          </Typography>
         </ListItem>
       </List>
     );
@@ -123,6 +127,7 @@ export const Navbar = () => {
                 fontSize="large"
               />
               <Typography
+                data-testid="nameLogo"  
                 variant="h5"
                 sx={{
                   color: "tan",
