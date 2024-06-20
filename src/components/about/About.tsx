@@ -19,7 +19,7 @@ export const About = () => {
   const handleDownload = (): ReactElement => {
     return (
       <Button
-        href="https://drive.google.com/file/d/1G9ErsdGqrhD-O8qNlTmJeugy16kMLibk/view?usp=drive_link"
+        href="https://drive.google.com/file/d/1f4PxPAWm7zZONOFaGRqayO5V4cDpBlTX/view?usp=drive_link"
         download="adrian_del_prado_cv.pdf"
         target="_blank"
         variant="outlined"
