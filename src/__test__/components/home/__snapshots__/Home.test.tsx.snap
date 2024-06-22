@@ -3,7 +3,7 @@
 exports[`home component test should render home 1`] = `
 <div>
   <div
-    class="MuiBox-root css-121k6hb"
+    class="MuiBox-root css-1nhtd43"
   >
     <h2
       class="MuiTypography-root MuiTypography-h2 css-o3dvd8-MuiTypography-root"
@@ -42,6 +42,16 @@ exports[`home component test should render home 1`] = `
         </span>
       </span>
     </h5>
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary css-qnifjw-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
+    >
+      see projects
+      <span
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+      />
+    </button>
   </div>
 </div>
 `;

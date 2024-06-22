@@ -108,6 +108,11 @@ export const Contacts = () => {
     message: yup.string().required("Message type is required"),
   });
 
+  const handleSubmitForm = (values: ContactForm) => {
+    console.log("values", dispatch(contacSubmit(values)));
+    form.resetForm();
+  };
+
   const form = useFormik<ContactForm>({
     initialValues: {
       fullname: "",
@@ -115,9 +120,7 @@ export const Contacts = () => {
       message: "",
     },
     validationSchema: validationSchema,
-    onSubmit: (values) => {
-      console.log("values", dispatch(contacSubmit(values)));
-    },
+    onSubmit: (values) => handleSubmitForm(values),
   });
 
   return (
@@ -136,7 +139,7 @@ export const Contacts = () => {
             <Typography
               variant="h5"
               sx={{
-                color: "tomato",
+                color: "tan",
                 textAlign: "center",
                 textTransform: "uppercase",
                 marginBottom: "1rem",
@@ -195,7 +198,7 @@ export const Contacts = () => {
                 },
               }}
             >
-              Contact Me
+              Send
             </Button>
           </form>
         </Box>

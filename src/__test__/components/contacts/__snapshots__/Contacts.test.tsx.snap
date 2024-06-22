@@ -15,7 +15,7 @@ exports[`Contact Component Tests Render Test 1`] = `
           data-testid="contact-form"
         >
           <h5
-            class="MuiTypography-root MuiTypography-h5 css-1f0uwg7-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 css-25wxyx-MuiTypography-root"
           >
             Hire or Contact me...
           </h5>
@@ -142,7 +142,7 @@ exports[`Contact Component Tests Render Test 1`] = `
             tabindex="0"
             type="submit"
           >
-            Contact Me
+            Send
             <span
               class="MuiButton-icon MuiButton-endIcon MuiButton-iconSizeMedium css-9tj150-MuiButton-endIcon"
             >

@@ -127,7 +127,7 @@ export const Navbar = () => {
                 fontSize="large"
               />
               <Typography
-                data-testid="nameLogo"  
+                data-testid="nameLogo"
                 variant="h5"
                 sx={{
                   color: "tan",

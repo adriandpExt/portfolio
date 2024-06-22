@@ -24,7 +24,7 @@ export const Wrapper = (props: WrapperProps) => {
         animate={{ y: [0, -10, 0] }}
         transition={{
           repeat: Infinity,
-          duration: 0.5,
+          duration: 1,
         }}
       >
         <motion.div whileHover={{ scale: 2 }}>{children}</motion.div>

@@ -1,11 +1,11 @@
-import React from "react";
+import { ReactElement } from "react";
 import { Header } from "../header";
 
-export const Home = () => {
+export const Home = (): ReactElement => {
   return (
-    <React.Fragment>
+    <>
       <Header />
-    </React.Fragment>
+    </>
   );
 };
 

@@ -24,7 +24,7 @@ describe("Contact Component Tests", () => {
   test("renders the contact form correctly", () => {
     const { getByTestId, getByLabelText, getByText } = render(screenContact);
 
-    expect(getByText("Contact Me")).toBeInTheDocument();
+    expect(getByText("Send")).toBeInTheDocument();
 
     expect(getByTestId("fullname")).toBeInTheDocument();
     expect(getByTestId("email")).toBeInTheDocument();
@@ -45,7 +45,7 @@ describe("Contact Component Tests", () => {
     fireEvent.submit(getByTestId("contact-form"));
 
     await waitFor(() => {
-      expect(getByText("Contact Me")).toBeInTheDocument();
+      expect(getByText("Send")).toBeInTheDocument();
     });
   });
 
