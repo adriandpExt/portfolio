@@ -16,22 +16,22 @@ describe("About Component Tests", () => {
     expect(container).toMatchSnapshot();
   });
 
-  test("CV Download Test", () => {
-    render(<About />);
+  // test("CV Download Test", () => {
+  //   render(<About />);
 
-    const downloadButton = screen.getByText("CV DOWNLOAD");
+  //   const downloadButton = screen.getByText("CV DOWNLOAD");
 
-    fireEvent.click(downloadButton);
-    expect(downloadButton).toHaveAttribute(
-      "href",
-      "https://drive.google.com/file/d/1f4PxPAWm7zZONOFaGRqayO5V4cDpBlTX/view?usp=drive_link"
-    );
-    expect(downloadButton).toHaveAttribute(
-      "download",
-      "adrian_del_prado_cv.pdf"
-    );
-    expect(downloadButton).toHaveAttribute("target", "_blank");
-  });
+  //   fireEvent.click(downloadButton);
+  //   expect(downloadButton).toHaveAttribute(
+  //     "href",
+  //     "https://drive.google.com/file/d/1f4PxPAWm7zZONOFaGRqayO5V4cDpBlTX/view?usp=drive_link"
+  //   );
+  //   expect(downloadButton).toHaveAttribute(
+  //     "download",
+  //     "adrian_del_prado_cv.pdf"
+  //   );
+  //   expect(downloadButton).toHaveAttribute("target", "_blank");
+  // });
 
   test("Tech Stack Render Test", () => {
     render(<About />);

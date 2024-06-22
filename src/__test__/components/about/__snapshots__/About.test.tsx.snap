@@ -8,18 +8,6 @@ exports[`About Component Tests Render Test 1`] = `
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-173qa7i-MuiGrid-root"
     >
-      <a
-        class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary css-15avm3p-MuiButtonBase-root-MuiButton-root"
-        download="adrian_del_prado_cv.pdf"
-        href="https://drive.google.com/file/d/1f4PxPAWm7zZONOFaGRqayO5V4cDpBlTX/view?usp=drive_link"
-        tabindex="0"
-        target="_blank"
-      >
-        CV DOWNLOAD
-        <span
-          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-        />
-      </a>
       <div
         class="MuiStack-root css-msk5bl-MuiStack-root"
       >

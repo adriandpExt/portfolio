@@ -60,7 +60,7 @@ export const ViewModal = (props: ViewModalProps) => {
   };
 
   const renderDescription = (description: string) => {
-    return <Typography variant="caption"> {description}</Typography>;
+    return <Typography variant="caption">{description}</Typography>;
   };
 
   return (
@@ -74,12 +74,16 @@ export const ViewModal = (props: ViewModalProps) => {
       <DialogTitle fontWeight={600} fontFamily="cursive" variant="h5">
         {project?.name}
       </DialogTitle>
+
       <DialogContent>
+        {renderDescription(project?.description as string)}
         {renderBar()}
 
-        {renderDescription(project?.description as string)}
-
-        <AwesomeSlider className="w-screen" organicArrows={true}>
+        <AwesomeSlider
+          className="w-screen"
+          organicArrows={true}
+          bullets={false}
+        >
           {renderSlider(project?.image as string[])}
         </AwesomeSlider>
       </DialogContent>

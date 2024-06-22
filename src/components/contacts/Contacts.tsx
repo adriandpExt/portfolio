@@ -185,7 +185,15 @@ export const Contacts = () => {
               type="submit"
               fullWidth={true}
               endIcon={<SendIcon />}
-              sx={{ marginTop: "1rem", color: "tomato", borderColor: "tan" }}
+              sx={{
+                marginTop: "1rem",
+                color: "tan",
+                borderColor: "tan",
+                "&:hover": {
+                  borderColor: "tomato",
+                  color: "tomato",
+                },
+              }}
             >
               Contact Me
             </Button>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1718868236942" clover="3.2.0">
-  <project timestamp="1718868236942" name="All files">
-    <metrics statements="296" coveredstatements="257" conditionals="18" coveredconditionals="14" methods="56" coveredmethods="35" elements="370" coveredelements="306" complexity="0" loc="296" ncloc="296" packages="14" files="33" classes="33"/>
+<coverage generated="1719040376656" clover="3.2.0">
+  <project timestamp="1719040376656" name="All files">
+    <metrics statements="297" coveredstatements="256" conditionals="18" coveredconditionals="14" methods="56" coveredmethods="34" elements="371" coveredelements="304" complexity="0" loc="297" ncloc="297" packages="14" files="33" classes="33"/>
     <package name="__test__.components.contacts">
       <metrics statements="11" coveredstatements="9" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="utils.ts" path="C:\Users\ADRIAN DEL PRADO\Documents\projects\react\portfolio\src\__test__\components\contacts\utils.ts">
@@ -37,42 +37,39 @@
       </file>
     </package>
     <package name="components.about">
-      <metrics statements="35" coveredstatements="35" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="9"/>
+      <metrics statements="32" coveredstatements="32" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
       <file name="About.tsx" path="C:\Users\ADRIAN DEL PRADO\Documents\projects\react\portfolio\src\components\about\About.tsx">
-        <metrics statements="25" coveredstatements="25" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
+        <metrics statements="22" coveredstatements="22" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
         <line num="2" count="8" type="stmt"/>
         <line num="4" count="8" type="stmt"/>
         <line num="5" count="8" type="stmt"/>
         <line num="6" count="8" type="stmt"/>
-        <line num="7" count="8" type="stmt"/>
-        <line num="9" count="8" type="stmt"/>
-        <line num="11" count="8" type="stmt"/>
-        <line num="13" count="8" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="10" count="8" type="stmt"/>
+        <line num="12" count="8" type="stmt"/>
+        <line num="14" count="8" type="stmt"/>
         <line num="15" count="8" type="stmt"/>
-        <line num="16" count="8" type="stmt"/>
-        <line num="18" count="8" type="stmt"/>
-        <line num="19" count="5" type="stmt"/>
-        <line num="20" count="5" type="stmt"/>
-        <line num="33" count="5" type="stmt"/>
-        <line num="34" count="5" type="stmt"/>
-        <line num="54" count="5" type="stmt"/>
-        <line num="55" count="5" type="stmt"/>
-        <line num="58" count="45" type="stmt"/>
-        <line num="73" count="5" type="stmt"/>
-        <line num="74" count="5" type="stmt"/>
-        <line num="77" count="15" type="stmt"/>
-        <line num="92" count="5" type="stmt"/>
-        <line num="93" count="5" type="stmt"/>
-        <line num="139" count="5" type="stmt"/>
-        <line num="179" count="8" type="stmt"/>
+        <line num="17" count="8" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="39" count="4" type="stmt"/>
+        <line num="40" count="4" type="stmt"/>
+        <line num="43" count="36" type="stmt"/>
+        <line num="58" count="4" type="stmt"/>
+        <line num="59" count="4" type="stmt"/>
+        <line num="62" count="12" type="stmt"/>
+        <line num="77" count="4" type="stmt"/>
+        <line num="78" count="4" type="stmt"/>
+        <line num="124" count="4" type="stmt"/>
+        <line num="163" count="8" type="stmt"/>
       </file>
       <file name="Wrapper.tsx" path="C:\Users\ADRIAN DEL PRADO\Documents\projects\react\portfolio\src\components\about\Wrapper.tsx">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="8" type="stmt"/>
         <line num="5" count="8" type="stmt"/>
         <line num="11" count="8" type="stmt"/>
-        <line num="12" count="61" type="stmt"/>
-        <line num="13" count="61" type="stmt"/>
+        <line num="12" count="49" type="stmt"/>
+        <line num="13" count="49" type="stmt"/>
         <line num="35" count="8" type="stmt"/>
       </file>
       <file name="index.ts" path="C:\Users\ADRIAN DEL PRADO\Documents\projects\react\portfolio\src\components\about\index.ts">
@@ -323,7 +320,7 @@
         <line num="62" count="0" type="stmt"/>
         <line num="63" count="0" type="stmt"/>
         <line num="66" count="0" type="stmt"/>
-        <line num="96" count="7" type="stmt"/>
+        <line num="100" count="7" type="stmt"/>
       </file>
       <file name="index.ts" path="C:\Users\ADRIAN DEL PRADO\Documents\projects\react\portfolio\src\components\portfolio\index.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -342,20 +339,24 @@
       </file>
     </package>
     <package name="components.resume">
-      <metrics statements="35" coveredstatements="24" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <metrics statements="39" coveredstatements="26" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
       <file name="Resume.tsx" path="C:\Users\ADRIAN DEL PRADO\Documents\projects\react\portfolio\src\components\resume\Resume.tsx">
-        <metrics statements="11" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="1" count="7" type="stmt"/>
-        <line num="2" count="7" type="stmt"/>
+        <metrics statements="15" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="3" count="7" type="stmt"/>
         <line num="5" count="7" type="stmt"/>
         <line num="6" count="7" type="stmt"/>
         <line num="7" count="7" type="stmt"/>
-        <line num="9" count="7" type="stmt"/>
+        <line num="8" count="7" type="stmt"/>
+        <line num="10" count="7" type="stmt"/>
+        <line num="12" count="7" type="stmt"/>
         <line num="13" count="7" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="35" count="7" type="stmt"/>
+        <line num="15" count="7" type="stmt"/>
+        <line num="19" count="7" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="70" count="7" type="stmt"/>
       </file>
       <file name="TimelineCard.tsx" path="C:\Users\ADRIAN DEL PRADO\Documents\projects\react\portfolio\src\components\resume\TimelineCard.tsx">
         <metrics statements="21" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
@@ -397,8 +398,8 @@
         <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="4" count="8" type="stmt"/>
         <line num="13" count="8" type="stmt"/>
-        <line num="14" count="61" type="cond" truecount="2" falsecount="0"/>
-        <line num="16" count="61" type="stmt"/>
+        <line num="14" count="49" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="49" type="stmt"/>
         <line num="25" count="8" type="stmt"/>
       </file>
       <file name="index.ts" path="C:\Users\ADRIAN DEL PRADO\Documents\projects\react\portfolio\src\components\svg-icons\index.ts">

@@ -1,7 +1,6 @@
-import { ReactElement, ReactNode } from "react";
+import { ReactNode } from "react";
 import { motion } from "framer-motion";
 
-import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
@@ -16,20 +15,6 @@ import { techStack, techTools } from "./utils";
 import { Stack } from "@mui/material";
 
 export const About = () => {
-  const handleDownload = (): ReactElement => {
-    return (
-      <Button
-        href="https://drive.google.com/file/d/1f4PxPAWm7zZONOFaGRqayO5V4cDpBlTX/view?usp=drive_link"
-        download="adrian_del_prado_cv.pdf"
-        target="_blank"
-        variant="outlined"
-        sx={{ color: "#FF6347", border: "1px solid #FF6347" }}
-      >
-        CV DOWNLOAD
-      </Button>
-    );
-  };
-
   const renderImage = () => {
     return (
       <Box>
@@ -151,7 +136,6 @@ export const About = () => {
       }}
     >
       <Grid item xs={12} sm={9}>
-        {handleDownload()}
         {renderAboutIntro()}
       </Grid>
 
