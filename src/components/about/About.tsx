@@ -139,7 +139,7 @@ export const About = () => {
         {renderAboutIntro()}
       </Grid>
 
-      <Grid item xs={12} sm={3}>
+      <Grid item xs={12} sm={6} md={6} lg={3}>
         {renderImage()}
       </Grid>
 
